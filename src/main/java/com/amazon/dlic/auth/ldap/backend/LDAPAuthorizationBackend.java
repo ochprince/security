@@ -72,16 +72,16 @@ import com.amazon.dlic.auth.ldap.util.ConfigConstants;
 import com.amazon.dlic.auth.ldap.util.LdapHelper;
 import com.amazon.dlic.auth.ldap.util.Utils;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.SpecialPermission;
-import org.opensearch.common.Strings;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auth.AuthorizationBackend;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.PemKeyReader;
-import org.opensearch.security.support.WildcardMatcher;
-import org.opensearch.security.user.AuthCredentials;
-import org.opensearch.security.user.User;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.SpecialPermission;
+import com.colasoft.opensearch.common.Strings;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auth.AuthorizationBackend;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.PemKeyReader;
+import com.colasoft.opensearch.security.support.WildcardMatcher;
+import com.colasoft.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.security.user.User;
 
 public class LDAPAuthorizationBackend implements AuthorizationBackend {
 

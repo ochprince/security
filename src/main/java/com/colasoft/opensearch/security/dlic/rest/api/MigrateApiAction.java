@@ -1,0 +1,266 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+package com.colasoft.opensearch.security.dlic.rest.api;
+
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.Collections;
+import java.util.List;
+
+import com.fasterxml.jackson.databind.JsonNode;
+import com.google.common.collect.ImmutableList;
+
+import com.colasoft.opensearch.LegacyESVersion;
+import com.colasoft.opensearch.Version;
+import com.colasoft.opensearch.action.ActionListener;
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexResponse;
+import com.colasoft.opensearch.action.bulk.BulkRequestBuilder;
+import com.colasoft.opensearch.action.bulk.BulkResponse;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy;
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.cluster.metadata.IndexMetadata;
+import com.colasoft.opensearch.cluster.service.ClusterService;
+import com.colasoft.opensearch.common.bytes.BytesReference;
+import com.colasoft.opensearch.common.collect.Tuple;
+import com.colasoft.opensearch.common.inject.Inject;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.settings.Settings.Builder;
+import com.colasoft.opensearch.common.xcontent.XContentHelper;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.rest.RestChannel;
+import com.colasoft.opensearch.rest.RestController;
+import com.colasoft.opensearch.rest.RestRequest;
+import com.colasoft.opensearch.rest.RestRequest.Method;
+import com.colasoft.opensearch.security.auditlog.AuditLog;
+import com.colasoft.opensearch.security.auditlog.config.AuditConfig;
+import com.colasoft.opensearch.security.configuration.AdminDNs;
+import com.colasoft.opensearch.security.configuration.ConfigurationRepository;
+import com.colasoft.opensearch.security.dlic.rest.validation.AbstractConfigurationValidator;
+import com.colasoft.opensearch.security.dlic.rest.validation.NoOpValidator;
+import com.colasoft.opensearch.security.privileges.PrivilegesEvaluator;
+import com.colasoft.opensearch.security.securityconf.Migration;
+import com.colasoft.opensearch.security.securityconf.impl.CType;
+import com.colasoft.opensearch.security.securityconf.impl.NodesDn;
+import com.colasoft.opensearch.security.securityconf.impl.SecurityDynamicConfiguration;
+import com.colasoft.opensearch.security.securityconf.impl.WhitelistingSettings;
+import com.colasoft.opensearch.security.securityconf.impl.v6.ActionGroupsV6;
+import com.colasoft.opensearch.security.securityconf.impl.v6.ConfigV6;
+import com.colasoft.opensearch.security.securityconf.impl.v6.InternalUserV6;
+import com.colasoft.opensearch.security.securityconf.impl.v6.RoleMappingsV6;
+import com.colasoft.opensearch.security.securityconf.impl.v6.RoleV6;
+import com.colasoft.opensearch.security.securityconf.impl.v7.ActionGroupsV7;
+import com.colasoft.opensearch.security.securityconf.impl.v7.ConfigV7;
+import com.colasoft.opensearch.security.securityconf.impl.v7.InternalUserV7;
+import com.colasoft.opensearch.security.securityconf.impl.v7.RoleMappingsV7;
+import com.colasoft.opensearch.security.securityconf.impl.v7.RoleV7;
+import com.colasoft.opensearch.security.securityconf.impl.v7.TenantV7;
+import com.colasoft.opensearch.security.ssl.transport.PrincipalExtractor;
+import com.colasoft.opensearch.threadpool.ThreadPool;
+
+import static com.colasoft.opensearch.security.dlic.rest.support.Utils.addRoutesPrefix;
+
+public class MigrateApiAction extends AbstractApiAction {
+    private static final List<Route> routes = addRoutesPrefix(Collections.singletonList(
+            new Route(Method.POST, "/migrate")
+    ));
+
+    @Inject
+    public MigrateApiAction(final Settings settings, final Path configPath, final RestController controller, final Client client,
+                            final AdminDNs adminDNs, final ConfigurationRepository cl, final ClusterService cs, final PrincipalExtractor principalExtractor,
+                            final PrivilegesEvaluator evaluator, ThreadPool threadPool, AuditLog auditLog) {
+        super(settings, configPath, controller, client, adminDNs, cl, cs, principalExtractor, evaluator, threadPool, auditLog);
+    }
+
+    @Override
+    public List<Route> routes() {
+        return routes;
+    }
+
+    @Override
+    protected Endpoint getEndpoint() {
+        return Endpoint.MIGRATE;
+    }
+
+    @SuppressWarnings("unchecked")
+    @Override
+    protected void handlePost(RestChannel channel, RestRequest request, Client client, final JsonNode content) throws IOException {
+
+        final Version oldestNodeVersion = cs.state().getNodes().getMinNodeVersion();
+
+        if(oldestNodeVersion.before(LegacyESVersion.V_7_0_0)) {
+            badRequestResponse(channel, "Can not migrate configuration because cluster is not fully migrated.");
+            return;
+        }
+
+        final SecurityDynamicConfiguration<?> loadedConfig = load(CType.CONFIG, true);
+
+        if (loadedConfig.getVersion() != 1) {
+            badRequestResponse(channel, "Can not migrate configuration because it was already migrated.");
+            return;
+        }
+
+        final SecurityDynamicConfiguration<ConfigV6> configV6 = (SecurityDynamicConfiguration<ConfigV6>) loadedConfig;
+        final SecurityDynamicConfiguration<ActionGroupsV6> actionGroupsV6 = (SecurityDynamicConfiguration<ActionGroupsV6>) load(CType.ACTIONGROUPS, true);
+        final SecurityDynamicConfiguration<InternalUserV6> internalUsersV6 = (SecurityDynamicConfiguration<InternalUserV6>) load(CType.INTERNALUSERS, true);
+        final SecurityDynamicConfiguration<RoleV6> rolesV6 = (SecurityDynamicConfiguration<RoleV6>) load(CType.ROLES, true);
+        final SecurityDynamicConfiguration<RoleMappingsV6> rolesmappingV6 = (SecurityDynamicConfiguration<RoleMappingsV6>) load(CType.ROLESMAPPING, true);
+        final SecurityDynamicConfiguration<NodesDn> nodesDnV6 = (SecurityDynamicConfiguration<NodesDn>) load(CType.NODESDN, true);
+        final SecurityDynamicConfiguration<WhitelistingSettings> whitelistingSettingV6 = (SecurityDynamicConfiguration<WhitelistingSettings>) load(CType.WHITELIST, true);
+        final SecurityDynamicConfiguration<AuditConfig> auditConfigV6 = (SecurityDynamicConfiguration<AuditConfig>) load(CType.AUDIT, true);
+
+        final ImmutableList.Builder<SecurityDynamicConfiguration<?>> builder = ImmutableList.builder();
+
+        final SecurityDynamicConfiguration<ActionGroupsV7> actionGroupsV7 = Migration.migrateActionGroups(actionGroupsV6);
+        builder.add(actionGroupsV7);
+        final SecurityDynamicConfiguration<ConfigV7> configV7 = Migration.migrateConfig(configV6);
+        builder.add(configV7);
+        final SecurityDynamicConfiguration<InternalUserV7> internalUsersV7 = Migration.migrateInternalUsers(internalUsersV6);
+        builder.add(internalUsersV7);
+        final Tuple<SecurityDynamicConfiguration<RoleV7>, SecurityDynamicConfiguration<TenantV7>> rolesTenantsV7 = Migration.migrateRoles(rolesV6,
+                rolesmappingV6);
+        builder.add(rolesTenantsV7.v1());
+        builder.add(rolesTenantsV7.v2());
+        final SecurityDynamicConfiguration<RoleMappingsV7> rolesmappingV7 = Migration.migrateRoleMappings(rolesmappingV6);
+        builder.add(rolesmappingV7);
+        final SecurityDynamicConfiguration<NodesDn> nodesDnV7 = Migration.migrateNodesDn(nodesDnV6);
+        builder.add(nodesDnV7);
+        final SecurityDynamicConfiguration<WhitelistingSettings> whitelistingSettingV7 = Migration.migrateWhitelistingSetting(whitelistingSettingV6);
+        builder.add(whitelistingSettingV7);
+        final SecurityDynamicConfiguration<AuditConfig> auditConfigV7 = Migration.migrateAudit(auditConfigV6);
+        builder.add(auditConfigV7);
+
+        final int replicas = cs.state().metadata().index(opendistroIndex).getNumberOfReplicas();
+        final String autoExpandReplicas = cs.state().metadata().index(opendistroIndex).getSettings().get(IndexMetadata.SETTING_AUTO_EXPAND_REPLICAS);
+
+        final Builder securityIndexSettings = Settings.builder();
+
+        if (autoExpandReplicas == null) {
+            securityIndexSettings.put(IndexMetadata.SETTING_NUMBER_OF_REPLICAS, replicas);
+        } else {
+            securityIndexSettings.put(IndexMetadata.SETTING_AUTO_EXPAND_REPLICAS, autoExpandReplicas);
+        }
+
+        securityIndexSettings.put(IndexMetadata.SETTING_NUMBER_OF_SHARDS, 1);
+
+        client.admin().indices().prepareDelete(this.opendistroIndex).execute(new ActionListener<AcknowledgedResponse>() {
+
+            @Override
+            public void onResponse(AcknowledgedResponse response) {
+
+                if (response.isAcknowledged()) {
+                    log.debug("opendistro_security index deleted successfully");
+
+                    client.admin().indices().prepareCreate(opendistroIndex).setSettings(securityIndexSettings)
+                            .execute(new ActionListener<CreateIndexResponse>() {
+
+                                @Override
+                                public void onResponse(CreateIndexResponse response) {
+                                    final List<SecurityDynamicConfiguration<?>> dynamicConfigurations = builder.build();
+                                    final ImmutableList.Builder<String> cTypes = ImmutableList.builderWithExpectedSize(dynamicConfigurations.size());
+                                    final BulkRequestBuilder br = client.prepareBulk(opendistroIndex);
+                                    br.setRefreshPolicy(RefreshPolicy.IMMEDIATE);
+                                    try {
+                                        for (SecurityDynamicConfiguration dynamicConfiguration : dynamicConfigurations) {
+                                            final String id = dynamicConfiguration.getCType().toLCString();
+                                            final BytesReference xContent = XContentHelper.toXContent(dynamicConfiguration, XContentType.JSON, false);
+                                            br.add(new IndexRequest().id(id).source(id, xContent));
+                                            cTypes.add(id);
+                                        }
+                                    } catch (final IOException e1) {
+                                        log.error("Unable to create bulk request " + e1, e1);
+                                        internalErrorResponse(channel, "Unable to create bulk request.");
+                                        return;
+                                    }
+
+                                    br.execute(new ConfigUpdatingActionListener(cTypes.build().toArray(new String[0]), client, new ActionListener<BulkResponse>() {
+
+                                        @Override
+                                        public void onResponse(BulkResponse response) {
+                                            if (response.hasFailures()) {
+                                                log.error("Unable to upload migrated configuration because of " + response.buildFailureMessage());
+                                                internalErrorResponse(channel, "Unable to upload migrated configuration (bulk index failed).");
+                                            } else {
+                                                log.debug("Migration completed");
+                                                successResponse(channel, "Migration completed.");
+                                            }
+
+                                        }
+
+                                        @Override
+                                        public void onFailure(Exception e) {
+                                            log.error("Unable to upload migrated configuration because of " + e, e);
+                                            internalErrorResponse(channel, "Unable to upload migrated configuration.");
+                                        }
+                                    }));
+
+                                }
+
+                                @Override
+                                public void onFailure(Exception e) {
+                                    log.error("Unable to create opendistro_security index because of " + e, e);
+                                    internalErrorResponse(channel, "Unable to create opendistro_security index.");
+                                }
+                            });
+
+                } else {
+                    log.error("Unable to create opendistro_security index.");
+                }
+            }
+
+            @Override
+            public void onFailure(Exception e) {
+                log.error("Unable to delete opendistro_security index because of " + e, e);
+                internalErrorResponse(channel, "Unable to delete opendistro_security index.");
+            }
+        });
+
+    }
+
+    @Override
+    protected void handleDelete(RestChannel channel, final RestRequest request, final Client client, final JsonNode content) throws IOException {
+        notImplemented(channel, Method.POST);
+    }
+
+    @Override
+    protected void handleGet(RestChannel channel, final RestRequest request, final Client client, final JsonNode content) throws IOException {
+        notImplemented(channel, Method.GET);
+    }
+
+    @Override
+    protected void handlePut(RestChannel channel, final RestRequest request, final Client client, final JsonNode content) throws IOException {
+        notImplemented(channel, Method.PUT);
+    }
+
+    @Override
+    protected AbstractConfigurationValidator getValidator(RestRequest request, BytesReference ref, Object... param) {
+        return new NoOpValidator(request, ref, this.settings, param);
+    }
+
+    @Override
+    protected String getResourceName() {
+        // not needed
+        return null;
+    }
+
+    @Override
+    protected CType getConfigName() {
+        return null;
+    }
+
+    @Override
+    protected void consumeParameters(final RestRequest request) {
+        // not needed
+    }
+
+}

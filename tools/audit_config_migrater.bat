@@ -16,4 +16,4 @@ if defined OPENSEARCH_JAVA_HOME (
   exit /b 1
 )
 
-%BIN_PATH% -cp "%DIR%\..\*;%DIR%\..\..\..\lib\*;%DIR%\..\deps\*" org.opensearch.security.tools.AuditConfigMigrater %*
+%BIN_PATH% -cp "%DIR%\..\*;%DIR%\..\..\..\lib\*;%DIR%\..\deps\*" com.colasoft.opensearch.security.tools.AuditConfigMigrater %*

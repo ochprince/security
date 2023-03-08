@@ -188,11 +188,11 @@ plugins.security.audit.type: internal_opensearch
 # This defines the OID of server node certificates
 #plugins.security.cert.oid: '1.2.3.4.5.5'
 
-# This specifies the implementation of org.opensearch.security.transport.InterClusterRequestEvaluator
+# This specifies the implementation of com.colasoft.opensearch.security.transport.InterClusterRequestEvaluator
 # that is used to determine inter-cluster request.
-# Instances of org.opensearch.security.transport.InterClusterRequestEvaluator must implement a single argument
-# constructor that takes an org.opensearch.common.settings.Settings
-#plugins.security.cert.intercluster_request_evaluator_class: org.opensearch.security.transport.DefaultInterClusterRequestEvaluator
+# Instances of com.colasoft.opensearch.security.transport.InterClusterRequestEvaluator must implement a single argument
+# constructor that takes an com.colasoft.opensearch.common.settings.Settings
+#plugins.security.cert.intercluster_request_evaluator_class: com.colasoft.opensearch.security.transport.DefaultInterClusterRequestEvaluator
 
 # By default, normal users can restore snapshots if they have the priviliges 'cluster:admin/snapshot/restore', 
 # 'indices:admin/create', and 'indices:data/write/index' for the indices to be restored.

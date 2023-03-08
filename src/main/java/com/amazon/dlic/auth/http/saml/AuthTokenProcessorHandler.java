@@ -51,18 +51,18 @@ import org.apache.logging.log4j.Logger;
 import org.joda.time.DateTime;
 import org.xml.sax.SAXException;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.SpecialPermission;
-import org.opensearch.common.bytes.BytesReference;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.rest.BytesRestResponse;
-import org.opensearch.rest.RestChannel;
-import org.opensearch.rest.RestRequest;
-import org.opensearch.rest.RestRequest.Method;
-import org.opensearch.rest.RestStatus;
-import org.opensearch.security.DefaultObjectMapper;
-import org.opensearch.security.dlic.rest.api.AuthTokenProcessorAction;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.SpecialPermission;
+import com.colasoft.opensearch.common.bytes.BytesReference;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.rest.BytesRestResponse;
+import com.colasoft.opensearch.rest.RestChannel;
+import com.colasoft.opensearch.rest.RestRequest;
+import com.colasoft.opensearch.rest.RestRequest.Method;
+import com.colasoft.opensearch.rest.RestStatus;
+import com.colasoft.opensearch.security.DefaultObjectMapper;
+import com.colasoft.opensearch.security.dlic.rest.api.AuthTokenProcessorAction;
 
 class AuthTokenProcessorHandler {
     private static final Logger log = LogManager.getLogger(AuthTokenProcessorHandler.class);

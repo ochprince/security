@@ -34,7 +34,7 @@ import org.apache.logging.log4j.Logger;
 import com.amazon.dlic.auth.http.jwt.oidc.json.OpenIdProviderConfiguration;
 import com.amazon.dlic.util.SettingsBasedSSLConfigurator.SSLConfig;
 
-import org.opensearch.security.DefaultObjectMapper;
+import com.colasoft.opensearch.security.DefaultObjectMapper;
 
 
 public class KeySetRetriever implements KeySetProvider {

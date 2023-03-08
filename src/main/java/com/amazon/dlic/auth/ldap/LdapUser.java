@@ -20,9 +20,9 @@ import org.ldaptive.LdapEntry;
 
 import com.amazon.dlic.auth.ldap.util.Utils;
 
-import org.opensearch.security.support.WildcardMatcher;
-import org.opensearch.security.user.AuthCredentials;
-import org.opensearch.security.user.User;
+import com.colasoft.opensearch.security.support.WildcardMatcher;
+import com.colasoft.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.security.user.User;
 
 public class LdapUser extends User {
 

@@ -60,9 +60,9 @@ import com.amazon.dlic.auth.ldap.util.ConfigConstants;
 import com.amazon.dlic.util.SettingsBasedSSLConfigurator;
 import com.amazon.dlic.util.SettingsBasedSSLConfigurator.SSLConfigException;
 
-import org.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.settings.Settings;
 
-import static org.opensearch.security.setting.DeprecatedSettings.checkForDeprecatedSetting;
+import static com.colasoft.opensearch.security.setting.DeprecatedSettings.checkForDeprecatedSetting;
 
 public class LDAPConnectionFactoryFactory {
 

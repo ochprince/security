@@ -14,7 +14,7 @@ Compatible with OpenSearch 2.4.0
 * Fix windows encoding issues ([#2206](https://github.com/opensearch-project/security/pull/2206)[#2218](https://github.com/opensearch-project/security/pull/2218))
 
 ### Maintenance
-* Add groupId = org.opensearch.plugin ([#2158](https://github.com/opensearch-project/security/pull/2158)[#2185](https://github.com/opensearch-project/security/pull/2185))
+* Add groupId = com.colasoft.opensearch.plugin ([#2158](https://github.com/opensearch-project/security/pull/2158)[#2185](https://github.com/opensearch-project/security/pull/2185))
 * Roles yml changes for security-analytics plugin ([#2192](https://github.com/opensearch-project/security/pull/2192)[#2225](https://github.com/opensearch-project/security/pull/2225))
 * Upgrade Kafka Client to 3.0.2 ([#2123](https://github.com/opensearch-project/security/pull/2123)[#2126](https://github.com/opensearch-project/security/pull/2126))
 * Log deprecation message on legacy ldap pool settings ([#2099](https://github.com/opensearch-project/security/pull/2099)[#2147](https://github.com/opensearch-project/security/pull/2147))

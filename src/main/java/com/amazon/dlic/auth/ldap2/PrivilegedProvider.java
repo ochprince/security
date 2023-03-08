@@ -35,7 +35,7 @@ import org.ldaptive.provider.SearchIterator;
 import org.ldaptive.provider.SearchListener;
 import org.ldaptive.provider.jndi.JndiProviderConfig;
 
-import org.opensearch.SpecialPermission;
+import com.colasoft.opensearch.SpecialPermission;
 
 public class PrivilegedProvider implements Provider<JndiProviderConfig> {
 

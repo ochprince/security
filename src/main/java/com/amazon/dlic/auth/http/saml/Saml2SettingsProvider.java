@@ -43,8 +43,8 @@ import org.opensaml.xmlsec.signature.X509Data;
 
 import com.amazon.dlic.auth.http.jwt.keybyoidc.AuthenticatorUnavailableException;
 
-import org.opensearch.SpecialPermission;
-import org.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.SpecialPermission;
+import com.colasoft.opensearch.common.settings.Settings;
 
 public class Saml2SettingsProvider {
     protected final static Logger log = LogManager.getLogger(Saml2SettingsProvider.class);

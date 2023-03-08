@@ -24,8 +24,8 @@ import org.opensaml.saml.metadata.resolver.impl.HTTPMetadataResolver;
 
 import com.amazon.dlic.util.SettingsBasedSSLConfigurator;
 
-import org.opensearch.SpecialPermission;
-import org.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.SpecialPermission;
+import com.colasoft.opensearch.common.settings.Settings;
 
 public class SamlHTTPMetadataResolver extends HTTPMetadataResolver {
 

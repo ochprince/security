@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import org.opensearch.gradle.testclusters.StandaloneRestIntegTestTask
+import com.colasoft.opensearch.gradle.testclusters.StandaloneRestIntegTestTask
 import java.util.concurrent.Callable
 
 apply plugin: 'opensearch.build'
@@ -48,7 +48,7 @@ ext {
 buildscript {
     ext {
         opensearch_version = System.getProperty("opensearch.version", "2.6.0-SNAPSHOT")
-        opensearch_group = "org.opensearch"
+        opensearch_group = "com.colasoft.opensearch"
     }
     repositories {
         mavenLocal()
@@ -70,7 +70,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation "org.opensearch.test:framework:${opensearch_version}"
+    testImplementation "com.colasoft.opensearch.test:framework:${opensearch_version}"
 }
 
 String bwcVersion = "2.4.0.0";
@@ -153,17 +153,17 @@ List<Provider<RegularFile>> plugins = [
         useCluster testClusters."${baseName}$i"
         if (System.getProperty("mixedCluster") != null) {
             filter {
-                includeTest("org.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInAMixedCluster")
+                includeTest("com.colasoft.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInAMixedCluster")
             }
         }
         if (System.getProperty("rollingUpgradeCluster") != null) {
             filter {
-                includeTest("org.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInARollingUpgradedCluster")
+                includeTest("com.colasoft.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInARollingUpgradedCluster")
             }
         }
         if (System.getProperty("fullRestartCluster") != null) {
             filter {
-                includeTest("org.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInAnUpgradedCluster")
+                includeTest("com.colasoft.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInAnUpgradedCluster")
             }
         }
         systemProperty 'tests.rest.bwcsuite', 'old_cluster'
@@ -187,12 +187,12 @@ task "${baseName}#mixedClusterTask"(type: StandaloneRestIntegTestTask) {
     }
     if (System.getProperty("mixedCluster") != null) {
         filter {
-            includeTest("org.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInAMixedCluster")
+            includeTest("com.colasoft.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInAMixedCluster")
         }
     }
     if (System.getProperty("rollingUpgradeCluster") != null) {
         filter {
-            includeTest("org.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInARollingUpgradedCluster")
+            includeTest("com.colasoft.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInARollingUpgradedCluster")
         }
     }
     systemProperty 'tests.rest.bwcsuite', 'mixed_cluster'
@@ -215,7 +215,7 @@ task "${baseName}#twoThirdsUpgradedClusterTask"(type: StandaloneRestIntegTestTas
     }
     if (System.getProperty("rollingUpgradeCluster") != null) {
         filter {
-            includeTest("org.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInARollingUpgradedCluster")
+            includeTest("com.colasoft.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInARollingUpgradedCluster")
         }
     }
     systemProperty 'tests.rest.bwcsuite', 'mixed_cluster'
@@ -238,7 +238,7 @@ task "${baseName}#rollingUpgradeClusterTask"(type: StandaloneRestIntegTestTask) 
     }
     if (System.getProperty("rollingUpgradeCluster") != null) {
         filter {
-            includeTest("org.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInARollingUpgradedCluster")
+            includeTest("com.colasoft.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInARollingUpgradedCluster")
         }
     }
     systemProperty 'tests.rest.bwcsuite', 'mixed_cluster'
@@ -260,7 +260,7 @@ tasks.register("${baseName}#fullRestartClusterTask", StandaloneRestIntegTestTask
     }
     if (System.getProperty("fullRestartCluster") != null) {
         filter {
-            includeTest("org.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInAnUpgradedCluster")
+            includeTest("com.colasoft.opensearch.security.bwc.SecurityBackwardsCompatibilityIT", "testPluginUpgradeInAnUpgradedCluster")
         }
     }
     systemProperty 'tests.rest.bwcsuite', 'upgraded_cluster'

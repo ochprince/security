@@ -36,7 +36,7 @@
       <useProjectArtifact>true</useProjectArtifact>
       <unpack>false</unpack>
       <excludes>
-        <exclude>org.opensearch:dlic*</exclude>
+        <exclude>com.colasoft.opensearch:dlic*</exclude>
       </excludes>
     </dependencySet>
   </dependencySets>
