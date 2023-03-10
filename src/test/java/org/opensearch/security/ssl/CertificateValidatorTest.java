@@ -15,7 +15,7 @@
  * 
  */
 
-package org.opensearch.security.ssl;
+package com.colasoft.opensearch.security.ssl;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -35,10 +35,10 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.ExceptionsHelper;
-import org.opensearch.security.ssl.util.CertificateValidator;
-import org.opensearch.security.ssl.util.ExceptionUtils;
-import org.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.ExceptionsHelper;
+import com.colasoft.opensearch.security.ssl.util.CertificateValidator;
+import com.colasoft.opensearch.security.ssl.util.ExceptionUtils;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
 
 public class CertificateValidatorTest {
     

@@ -40,8 +40,8 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.network.SocketUtils;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.network.SocketUtils;
 
 final class LdapServer {
     private final static Logger LOG = LogManager.getLogger(LdapServer.class);

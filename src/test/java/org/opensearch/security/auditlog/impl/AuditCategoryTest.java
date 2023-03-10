@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.impl;
+package com.colasoft.opensearch.security.auditlog.impl;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -23,8 +23,8 @@ import org.junit.experimental.runners.Enclosed;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import static org.opensearch.security.auditlog.impl.AuditCategory.AUTHENTICATED;
-import static org.opensearch.security.auditlog.impl.AuditCategory.BAD_HEADERS;
+import static com.colasoft.opensearch.security.auditlog.impl.AuditCategory.AUTHENTICATED;
+import static com.colasoft.opensearch.security.auditlog.impl.AuditCategory.BAD_HEADERS;
 
 @RunWith(Enclosed.class)
 public class AuditCategoryTest {

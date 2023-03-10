@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.test.helper.cluster;
+package com.colasoft.opensearch.security.test.helper.cluster;
 
 import java.io.File;
 import java.io.IOException;
@@ -43,28 +43,28 @@ import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.opensearch.OpenSearchTimeoutException;
-import org.opensearch.action.admin.cluster.health.ClusterHealthResponse;
-import org.opensearch.action.admin.cluster.node.info.NodeInfo;
-import org.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
-import org.opensearch.action.admin.cluster.node.info.NodesInfoResponse;
-import org.opensearch.action.admin.indices.template.put.PutIndexTemplateRequest;
-import org.opensearch.action.support.master.AcknowledgedResponse;
-import org.opensearch.client.Client;
-import org.opensearch.cluster.health.ClusterHealthStatus;
-import org.opensearch.cluster.node.DiscoveryNodeRole;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.transport.TransportAddress;
-import org.opensearch.common.unit.TimeValue;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.http.HttpInfo;
-import org.opensearch.node.Node;
-import org.opensearch.node.PluginAwareNode;
-import org.opensearch.security.test.NodeSettingsSupplier;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.cluster.ClusterConfiguration.NodeSettings;
-import org.opensearch.security.test.helper.network.SocketUtils;
-import org.opensearch.transport.TransportInfo;
+import com.colasoft.opensearch.OpenSearchTimeoutException;
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthResponse;
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodeInfo;
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodesInfoResponse;
+import com.colasoft.opensearch.action.admin.indices.template.put.PutIndexTemplateRequest;
+import com.colasoft.opensearch.action.support.master.AcknowledgedResponse;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.cluster.health.ClusterHealthStatus;
+import com.colasoft.opensearch.cluster.node.DiscoveryNodeRole;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.transport.TransportAddress;
+import com.colasoft.opensearch.common.unit.TimeValue;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.http.HttpInfo;
+import com.colasoft.opensearch.node.Node;
+import com.colasoft.opensearch.node.PluginAwareNode;
+import com.colasoft.opensearch.security.test.NodeSettingsSupplier;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterConfiguration.NodeSettings;
+import com.colasoft.opensearch.security.test.helper.network.SocketUtils;
+import com.colasoft.opensearch.transport.TransportInfo;
 
 public final class ClusterHelper {
 

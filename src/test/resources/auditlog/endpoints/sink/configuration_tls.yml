@@ -40,4 +40,4 @@ plugins.security:
               verify: true
               pemtrustedcas_content: dyn
       fallback:
-        type: org.opensearch.security.auditlog.helper.LoggingSink
+        type: com.colasoft.opensearch.security.auditlog.helper.LoggingSink

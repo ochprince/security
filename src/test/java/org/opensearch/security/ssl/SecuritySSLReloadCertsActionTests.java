@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.ssl;
+package com.colasoft.opensearch.security.ssl;
 
 import java.io.IOException;
 import java.util.List;
@@ -28,14 +28,14 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.cluster.ClusterConfiguration;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterConfiguration;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
 
 public class SecuritySSLReloadCertsActionTests extends SingleClusterTest {
 

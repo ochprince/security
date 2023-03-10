@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.compliance;
+package com.colasoft.opensearch.security.auditlog.compliance;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -22,25 +22,25 @@ import org.apache.http.HttpStatus;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.action.get.GetRequest;
-import org.opensearch.action.get.GetResponse;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.support.WriteRequest.RefreshPolicy;
-import org.opensearch.client.Client;
-import org.opensearch.client.RequestOptions;
-import org.opensearch.client.RestHighLevelClient;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auditlog.AbstractAuditlogiUnitTest;
-import org.opensearch.security.auditlog.AuditTestUtils;
-import org.opensearch.security.auditlog.config.AuditConfig;
-import org.opensearch.security.auditlog.impl.AuditCategory;
-import org.opensearch.security.auditlog.impl.AuditMessage;
-import org.opensearch.security.auditlog.integration.TestAuditlogImpl;
-import org.opensearch.security.auditlog.integration.TestAuditlogImpl.MessagesNotFoundException;
-import org.opensearch.security.compliance.ComplianceConfig;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.action.get.GetRequest;
+import com.colasoft.opensearch.action.get.GetResponse;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.client.RequestOptions;
+import com.colasoft.opensearch.client.RestHighLevelClient;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auditlog.AbstractAuditlogiUnitTest;
+import com.colasoft.opensearch.security.auditlog.AuditTestUtils;
+import com.colasoft.opensearch.security.auditlog.config.AuditConfig;
+import com.colasoft.opensearch.security.auditlog.impl.AuditCategory;
+import com.colasoft.opensearch.security.auditlog.impl.AuditMessage;
+import com.colasoft.opensearch.security.auditlog.integration.TestAuditlogImpl;
+import com.colasoft.opensearch.security.auditlog.integration.TestAuditlogImpl.MessagesNotFoundException;
+import com.colasoft.opensearch.security.compliance.ComplianceConfig;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.AnyOf.anyOf;

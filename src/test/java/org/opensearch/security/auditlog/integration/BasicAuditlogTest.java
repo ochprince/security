@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.integration;
+package com.colasoft.opensearch.security.auditlog.integration;
 
 import java.util.Collections;
 import java.util.List;
@@ -21,33 +21,33 @@ import org.apache.http.message.BasicHeader;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest.AliasActions;
-import org.opensearch.action.admin.indices.create.CreateIndexRequest;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.support.WriteRequest.RefreshPolicy;
-import org.opensearch.client.Client;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.security.auditlog.AbstractAuditlogiUnitTest;
-import org.opensearch.security.auditlog.AuditLog.Origin;
-import org.opensearch.security.auditlog.AuditTestUtils;
-import org.opensearch.security.auditlog.config.AuditConfig;
-import org.opensearch.security.auditlog.config.AuditConfig.Filter.FilterEntries;
-import org.opensearch.security.auditlog.impl.AuditCategory;
-import org.opensearch.security.auditlog.impl.AuditMessage;
-import org.opensearch.security.compliance.ComplianceConfig;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest.AliasActions;
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.security.auditlog.AbstractAuditlogiUnitTest;
+import com.colasoft.opensearch.security.auditlog.AuditLog.Origin;
+import com.colasoft.opensearch.security.auditlog.AuditTestUtils;
+import com.colasoft.opensearch.security.auditlog.config.AuditConfig;
+import com.colasoft.opensearch.security.auditlog.config.AuditConfig.Filter.FilterEntries;
+import com.colasoft.opensearch.security.auditlog.impl.AuditCategory;
+import com.colasoft.opensearch.security.auditlog.impl.AuditMessage;
+import com.colasoft.opensearch.security.compliance.ComplianceConfig;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-import static org.opensearch.rest.RestRequest.Method.DELETE;
-import static org.opensearch.rest.RestRequest.Method.GET;
-import static org.opensearch.rest.RestRequest.Method.PATCH;
-import static org.opensearch.rest.RestRequest.Method.POST;
-import static org.opensearch.rest.RestRequest.Method.PUT;
+import static com.colasoft.opensearch.rest.RestRequest.Method.DELETE;
+import static com.colasoft.opensearch.rest.RestRequest.Method.GET;
+import static com.colasoft.opensearch.rest.RestRequest.Method.PATCH;
+import static com.colasoft.opensearch.rest.RestRequest.Method.POST;
+import static com.colasoft.opensearch.rest.RestRequest.Method.PUT;
 
 public class BasicAuditlogTest extends AbstractAuditlogiUnitTest {
 

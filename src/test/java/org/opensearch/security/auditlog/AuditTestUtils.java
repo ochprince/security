@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog;
+package com.colasoft.opensearch.security.auditlog;
 
 import java.nio.file.Path;
 
@@ -17,15 +17,15 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.http.HttpStatus;
 
-import org.opensearch.client.Client;
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver;
-import org.opensearch.cluster.service.ClusterService;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auditlog.config.AuditConfig;
-import org.opensearch.security.auditlog.impl.AbstractAuditLog;
-import org.opensearch.security.auditlog.impl.AuditLogImpl;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.threadpool.ThreadPool;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver;
+import com.colasoft.opensearch.cluster.service.ClusterService;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auditlog.config.AuditConfig;
+import com.colasoft.opensearch.security.auditlog.impl.AbstractAuditLog;
+import com.colasoft.opensearch.security.auditlog.impl.AuditLogImpl;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.threadpool.ThreadPool;
 
 import static org.junit.Assert.assertEquals;
 

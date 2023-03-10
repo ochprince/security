@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.rest.api;
+package com.colasoft.opensearch.security.dlic.rest.api;
 
 import java.net.URLEncoder;
 import java.util.List;
@@ -20,19 +20,19 @@ import org.apache.http.message.BasicHeader;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.security.dlic.rest.validation.AbstractConfigurationValidator;
-import org.opensearch.security.securityconf.impl.CType;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.security.dlic.rest.validation.AbstractConfigurationValidator;
+import com.colasoft.opensearch.security.securityconf.impl.CType;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
-import static org.opensearch.security.OpenSearchSecurityPlugin.PLUGINS_PREFIX;
-import static org.opensearch.security.dlic.rest.api.InternalUsersApiAction.RESTRICTED_FROM_USERNAME;
+import static com.colasoft.opensearch.security.OpenSearchSecurityPlugin.PLUGINS_PREFIX;
+import static com.colasoft.opensearch.security.dlic.rest.api.InternalUsersApiAction.RESTRICTED_FROM_USERNAME;
 
 
 public class UserApiTest extends AbstractRestApiUnitTest {

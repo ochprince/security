@@ -23,7 +23,7 @@
  * Modifications Copyright OpenSearch Contributors. See
  * GitHub history for details.
  */
-package org.opensearch.security.http.proxy;
+package com.colasoft.opensearch.security.http.proxy;
 
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
@@ -35,20 +35,20 @@ import com.google.common.collect.ImmutableSet;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.action.ActionListener;
-import org.opensearch.common.bytes.BytesReference;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.util.concurrent.ThreadContext;
-import org.opensearch.common.xcontent.NamedXContentRegistry;
-import org.opensearch.http.HttpChannel;
-import org.opensearch.http.HttpRequest;
-import org.opensearch.http.HttpResponse;
-import org.opensearch.rest.RestRequest;
-import org.opensearch.rest.RestRequest.Method;
-import org.opensearch.rest.RestStatus;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.action.ActionListener;
+import com.colasoft.opensearch.common.bytes.BytesReference;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext;
+import com.colasoft.opensearch.common.xcontent.NamedXContentRegistry;
+import com.colasoft.opensearch.http.HttpChannel;
+import com.colasoft.opensearch.http.HttpRequest;
+import com.colasoft.opensearch.http.HttpResponse;
+import com.colasoft.opensearch.rest.RestRequest;
+import com.colasoft.opensearch.rest.RestRequest.Method;
+import com.colasoft.opensearch.rest.RestStatus;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.user.AuthCredentials;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

@@ -13,7 +13,7 @@
  *   permissions and limitations under the License.
  */
 
-package org.opensearch.security.auth;
+package com.colasoft.opensearch.security.auth;
 
 import java.util.Arrays;
 import java.util.List;
@@ -22,17 +22,17 @@ import java.util.Set;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.util.concurrent.ThreadContext;
-import org.opensearch.security.auditlog.AuditLog;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.user.User;
-import org.opensearch.tasks.Task;
-import org.opensearch.transport.TransportRequest;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext;
+import com.colasoft.opensearch.security.auditlog.AuditLog;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.user.User;
+import com.colasoft.opensearch.tasks.Task;
+import com.colasoft.opensearch.transport.TransportRequest;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
-import static org.opensearch.security.support.ConfigConstants.OPENDISTRO_SECURITY_INJECTED_ROLES;
+import static com.colasoft.opensearch.security.support.ConfigConstants.OPENDISTRO_SECURITY_INJECTED_ROLES;
 
 
 public class RolesInjectorTest {

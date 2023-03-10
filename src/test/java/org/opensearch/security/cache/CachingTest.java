@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.cache;
+package com.colasoft.opensearch.security.cache;
 
 import org.apache.http.HttpStatus;
 import org.apache.http.message.BasicHeader;
@@ -17,11 +17,11 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 public class CachingTest extends SingleClusterTest{
 

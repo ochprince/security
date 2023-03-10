@@ -9,19 +9,19 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.rest.api;
+package com.colasoft.opensearch.security.dlic.rest.api;
 
 import org.apache.http.Header;
 import org.apache.http.HttpStatus;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.security.DefaultObjectMapper;
-import org.opensearch.security.support.SecurityJsonNode;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.security.DefaultObjectMapper;
+import com.colasoft.opensearch.security.support.SecurityJsonNode;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
-import static org.opensearch.security.OpenSearchSecurityPlugin.PLUGINS_PREFIX;
+import static com.colasoft.opensearch.security.OpenSearchSecurityPlugin.PLUGINS_PREFIX;
 
 public class IndexMissingTest extends AbstractRestApiUnitTest {
     private final String ENDPOINT; 

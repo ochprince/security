@@ -8,7 +8,7 @@
  * Modifications Copyright OpenSearch Contributors. See
  * GitHub history for details.
  */
-package org.opensearch.security.ssl.util;
+package com.colasoft.opensearch.security.ssl.util;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufAllocator;
@@ -16,7 +16,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.opensearch.transport.NettyAllocator.getAllocator;
+import static com.colasoft.opensearch.transport.NettyAllocator.getAllocator;
 
 public class TLSUtilTests {
 

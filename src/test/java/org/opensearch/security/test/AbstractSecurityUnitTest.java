@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.test;
+package com.colasoft.opensearch.security.test;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -58,31 +58,31 @@ import org.junit.rules.TemporaryFolder;
 import org.junit.rules.TestName;
 import org.junit.rules.TestWatcher;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.action.admin.cluster.health.ClusterHealthRequest;
-import org.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
-import org.opensearch.action.admin.indices.create.CreateIndexRequest;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.search.SearchRequest;
-import org.opensearch.action.search.SearchResponse;
-import org.opensearch.client.Client;
-import org.opensearch.client.RestClient;
-import org.opensearch.client.RestClientBuilder;
-import org.opensearch.client.RestHighLevelClient;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.action.configupdate.ConfigUpdateAction;
-import org.opensearch.security.action.configupdate.ConfigUpdateRequest;
-import org.opensearch.security.action.configupdate.ConfigUpdateResponse;
-import org.opensearch.security.securityconf.impl.CType;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.support.WildcardMatcher;
-import org.opensearch.security.test.helper.cluster.ClusterHelper;
-import org.opensearch.security.test.helper.cluster.ClusterInfo;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
-import org.opensearch.security.test.helper.rules.SecurityTestWatcher;
-import org.opensearch.threadpool.ThreadPool;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthRequest;
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.search.SearchRequest;
+import com.colasoft.opensearch.action.search.SearchResponse;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.client.RestClient;
+import com.colasoft.opensearch.client.RestClientBuilder;
+import com.colasoft.opensearch.client.RestHighLevelClient;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.action.configupdate.ConfigUpdateAction;
+import com.colasoft.opensearch.security.action.configupdate.ConfigUpdateRequest;
+import com.colasoft.opensearch.security.action.configupdate.ConfigUpdateResponse;
+import com.colasoft.opensearch.security.securityconf.impl.CType;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.support.WildcardMatcher;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterHelper;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterInfo;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.security.test.helper.rules.SecurityTestWatcher;
+import com.colasoft.opensearch.threadpool.ThreadPool;
 
 /*
  * There are real thread leaks during test execution, not all threads are 

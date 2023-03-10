@@ -13,7 +13,7 @@
  *   permissions and limitations under the License.
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import org.apache.http.HttpStatus;
 import org.apache.logging.log4j.LogManager;
@@ -21,16 +21,16 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
-import org.opensearch.action.admin.indices.create.CreateIndexRequest;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.support.WriteRequest;
-import org.opensearch.client.Client;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.support.WriteRequest;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
 
 
 public class ResolveAPITests extends SingleClusterTest {

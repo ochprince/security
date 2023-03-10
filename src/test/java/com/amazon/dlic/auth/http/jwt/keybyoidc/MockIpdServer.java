@@ -49,8 +49,8 @@ import org.apache.http.io.HttpMessageWriterFactory;
 import org.apache.http.protocol.HttpContext;
 import org.apache.http.protocol.HttpRequestHandler;
 
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.network.SocketUtils;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.network.SocketUtils;
 
 import static com.amazon.dlic.auth.http.jwt.keybyoidc.CxfTestTools.toJson;
 

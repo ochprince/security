@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.util;
+package com.colasoft.opensearch.security.util;
 
 import java.io.Closeable;
 import java.io.FileInputStream;
@@ -66,10 +66,10 @@ import org.junit.rules.ExpectedException;
 import com.amazon.dlic.util.SettingsBasedSSLConfigurator;
 import com.amazon.dlic.util.SettingsBasedSSLConfigurator.SSLConfig;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.network.SocketUtils;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.network.SocketUtils;
 
 import static org.hamcrest.CoreMatchers.either;
 import static org.hamcrest.CoreMatchers.instanceOf;

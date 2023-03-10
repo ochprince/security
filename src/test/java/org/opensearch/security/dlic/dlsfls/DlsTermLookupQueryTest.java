@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.dlsfls;
+package com.colasoft.opensearch.security.dlic.dlsfls;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -21,36 +21,36 @@ import java.util.stream.Collectors;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.action.admin.indices.create.CreateIndexRequest;
-import org.opensearch.action.admin.indices.mapping.put.PutMappingRequest;
-import org.opensearch.action.get.GetResponse;
-import org.opensearch.action.get.MultiGetItemResponse;
-import org.opensearch.action.get.MultiGetResponse;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.search.MultiSearchResponse;
-import org.opensearch.action.search.MultiSearchResponse.Item;
-import org.opensearch.action.search.SearchResponse;
-import org.opensearch.action.support.WriteRequest.RefreshPolicy;
-import org.opensearch.client.Client;
-import org.opensearch.common.ParseField;
-import org.opensearch.common.xcontent.ContextParser;
-import org.opensearch.common.xcontent.LoggingDeprecationHandler;
-import org.opensearch.common.xcontent.NamedXContentRegistry;
-import org.opensearch.common.xcontent.XContentParser;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.search.SearchHit;
-import org.opensearch.search.aggregations.Aggregation;
-import org.opensearch.search.aggregations.Aggregations;
-import org.opensearch.search.aggregations.bucket.terms.ParsedStringTerms;
-import org.opensearch.search.aggregations.bucket.terms.StringTerms;
-import org.opensearch.search.aggregations.bucket.terms.Terms;
-import org.opensearch.search.aggregations.bucket.terms.Terms.Bucket;
-import org.opensearch.search.aggregations.metrics.ParsedTopHits;
-import org.opensearch.search.aggregations.metrics.TopHitsAggregationBuilder;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest;
+import com.colasoft.opensearch.action.admin.indices.mapping.put.PutMappingRequest;
+import com.colasoft.opensearch.action.get.GetResponse;
+import com.colasoft.opensearch.action.get.MultiGetItemResponse;
+import com.colasoft.opensearch.action.get.MultiGetResponse;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.search.MultiSearchResponse;
+import com.colasoft.opensearch.action.search.MultiSearchResponse.Item;
+import com.colasoft.opensearch.action.search.SearchResponse;
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.common.ParseField;
+import com.colasoft.opensearch.common.xcontent.ContextParser;
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler;
+import com.colasoft.opensearch.common.xcontent.NamedXContentRegistry;
+import com.colasoft.opensearch.common.xcontent.XContentParser;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.search.SearchHit;
+import com.colasoft.opensearch.search.aggregations.Aggregation;
+import com.colasoft.opensearch.search.aggregations.Aggregations;
+import com.colasoft.opensearch.search.aggregations.bucket.terms.ParsedStringTerms;
+import com.colasoft.opensearch.search.aggregations.bucket.terms.StringTerms;
+import com.colasoft.opensearch.search.aggregations.bucket.terms.Terms;
+import com.colasoft.opensearch.search.aggregations.bucket.terms.Terms.Bucket;
+import com.colasoft.opensearch.search.aggregations.metrics.ParsedTopHits;
+import com.colasoft.opensearch.search.aggregations.metrics.TopHitsAggregationBuilder;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
-import static org.opensearch.security.dlic.dlsfls.DlsTermsLookupAsserts.assertAccessCodesMatch;
+import static com.colasoft.opensearch.security.dlic.dlsfls.DlsTermsLookupAsserts.assertAccessCodesMatch;
 
 public class DlsTermLookupQueryTest extends AbstractDlsFlsTest {
 

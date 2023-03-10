@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.sanity.tests;
+package com.colasoft.opensearch.security.sanity.tests;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,20 +18,20 @@ import java.util.Map;
 
 import org.apache.http.HttpHost;
 
-import org.opensearch.client.Request;
-import org.opensearch.client.Response;
-import org.opensearch.client.RestClient;
-import org.opensearch.client.RestClientBuilder;
-import org.opensearch.common.io.PathUtils;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.commons.rest.SecureRestClientBuilder;
-import org.opensearch.test.rest.OpenSearchRestTestCase;
+import com.colasoft.opensearch.client.Request;
+import com.colasoft.opensearch.client.Response;
+import com.colasoft.opensearch.client.RestClient;
+import com.colasoft.opensearch.client.RestClientBuilder;
+import com.colasoft.opensearch.common.io.PathUtils;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.commons.rest.SecureRestClientBuilder;
+import com.colasoft.opensearch.test.rest.OpenSearchRestTestCase;
 
-import static org.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_ENABLED;
-import static org.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_FILEPATH;
-import static org.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_KEYPASSWORD;
-import static org.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_PASSWORD;
-import static org.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_PEMCERT_FILEPATH;
+import static com.colasoft.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_ENABLED;
+import static com.colasoft.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_FILEPATH;
+import static com.colasoft.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_KEYPASSWORD;
+import static com.colasoft.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_KEYSTORE_PASSWORD;
+import static com.colasoft.opensearch.commons.ConfigConstants.OPENSEARCH_SECURITY_SSL_HTTP_PEMCERT_FILEPATH;
 
 /**
  * Overrides OpenSearchRestTestCase to fit the use-case for testing

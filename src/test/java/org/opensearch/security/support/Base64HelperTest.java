@@ -8,7 +8,7 @@
  * Modifications Copyright OpenSearch Contributors. See
  * GitHub history for details.
  */
-package org.opensearch.security.support;
+package com.colasoft.opensearch.security.support;
 
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectOutputStream;
@@ -22,12 +22,12 @@ import com.google.common.io.BaseEncoding;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.OpenSearchException;
-import org.opensearch.action.search.SearchRequest;
-import org.opensearch.security.user.User;
+import com.colasoft.opensearch.OpenSearchException;
+import com.colasoft.opensearch.action.search.SearchRequest;
+import com.colasoft.opensearch.security.user.User;
 
-import static org.opensearch.security.support.Base64Helper.deserializeObject;
-import static org.opensearch.security.support.Base64Helper.serializeObject;
+import static com.colasoft.opensearch.security.support.Base64Helper.deserializeObject;
+import static com.colasoft.opensearch.security.support.Base64Helper.serializeObject;
 
 public class Base64HelperTest {
 

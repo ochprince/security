@@ -153,8 +153,8 @@ import org.opensaml.xmlsec.signature.support.Signer;
 import org.opensaml.xmlsec.signature.support.impl.ExplicitKeySignatureTrustEngine;
 import org.w3c.dom.Document;
 
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.network.SocketUtils;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.network.SocketUtils;
 
 class MockSamlIdpServer implements Closeable {
 

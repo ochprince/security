@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.test.helper.network;
+package com.colasoft.opensearch.security.test.helper.network;
 
 /*
  * Copyright 2002-2017 the original author or authors.

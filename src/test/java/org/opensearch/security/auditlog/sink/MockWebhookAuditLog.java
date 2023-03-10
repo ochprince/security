@@ -9,9 +9,9 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.sink;
+package com.colasoft.opensearch.security.auditlog.sink;
 
-import org.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.settings.Settings;
 
 public class MockWebhookAuditLog extends WebhookSink {
 

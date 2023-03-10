@@ -24,17 +24,17 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import java.util.Map;
 
 import org.bouncycastle.crypto.generators.OpenBSDBCrypt;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.support.SecurityUtils;
-import org.opensearch.security.support.WildcardMatcher;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.support.SecurityUtils;
+import com.colasoft.opensearch.security.support.WildcardMatcher;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

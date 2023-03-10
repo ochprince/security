@@ -9,17 +9,17 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.compliance;
+package com.colasoft.opensearch.security.auditlog.compliance;
 
 import java.util.Collections;
 
 import com.google.common.collect.ImmutableSet;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.compliance.ComplianceConfig;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.support.WildcardMatcher;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.compliance.ComplianceConfig;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.support.WildcardMatcher;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.rest.api;
+package com.colasoft.opensearch.security.dlic.rest.api;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -24,15 +24,15 @@ import org.apache.http.Header;
 import org.apache.http.HttpStatus;
 import org.junit.Assert;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.plugins.Plugin;
-import org.opensearch.security.DefaultObjectMapper;
-import org.opensearch.security.auditlog.AuditTestUtils;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.plugins.Plugin;
+import com.colasoft.opensearch.security.DefaultObjectMapper;
+import com.colasoft.opensearch.security.auditlog.AuditTestUtils;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 public abstract class AbstractRestApiUnitTest extends SingleClusterTest {
 

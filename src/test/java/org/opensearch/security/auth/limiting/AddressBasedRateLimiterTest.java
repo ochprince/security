@@ -15,12 +15,12 @@
  * 
  */
 
-package org.opensearch.security.auth.limiting;
+package com.colasoft.opensearch.security.auth.limiting;
 
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.user.AuthCredentials;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

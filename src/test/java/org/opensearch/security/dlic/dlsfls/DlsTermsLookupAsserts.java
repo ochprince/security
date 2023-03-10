@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.dlsfls;
+package com.colasoft.opensearch.security.dlic.dlsfls;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -17,7 +17,7 @@ import java.util.Map;
 
 import org.junit.Assert;
 
-import org.opensearch.search.SearchHit;
+import com.colasoft.opensearch.search.SearchHit;
 
 import static org.junit.Assert.assertTrue;
 

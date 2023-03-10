@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import java.io.IOException;
 
@@ -32,21 +32,21 @@ import org.apache.http.HttpStatus;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.action.admin.cluster.health.ClusterHealthRequest;
-import org.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
-import org.opensearch.action.admin.cluster.settings.ClusterUpdateSettingsRequest;
-import org.opensearch.cluster.health.ClusterHealthStatus;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.unit.TimeValue;
-import org.opensearch.node.Node;
-import org.opensearch.node.PluginAwareNode;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.cluster.ClusterConfiguration;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.transport.Netty4Plugin;
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthRequest;
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
+import com.colasoft.opensearch.action.admin.cluster.settings.ClusterUpdateSettingsRequest;
+import com.colasoft.opensearch.cluster.health.ClusterHealthStatus;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.unit.TimeValue;
+import com.colasoft.opensearch.node.Node;
+import com.colasoft.opensearch.node.PluginAwareNode;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterConfiguration;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.transport.Netty4Plugin;
 
 public class SlowIntegrationTests extends SingleClusterTest {
 
@@ -54,7 +54,7 @@ public class SlowIntegrationTests extends SingleClusterTest {
     public void testCustomInterclusterRequestEvaluator() throws Exception {
         
         final Settings settings = Settings.builder()
-                .put(ConfigConstants.SECURITY_INTERCLUSTER_REQUEST_EVALUATOR_CLASS, "org.opensearch.security.AlwaysFalseInterClusterRequestEvaluator")
+                .put(ConfigConstants.SECURITY_INTERCLUSTER_REQUEST_EVALUATOR_CLASS, "com.colasoft.opensearch.security.AlwaysFalseInterClusterRequestEvaluator")
                 .put("discovery.initial_state_timeout","8s")
                 .build();
         setup(Settings.EMPTY, null, settings, false, ClusterConfiguration.DEFAULT ,5,1);

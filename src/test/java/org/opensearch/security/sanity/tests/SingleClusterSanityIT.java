@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.sanity.tests;
+package com.colasoft.opensearch.security.sanity.tests;
 
 import java.util.List;
 import java.util.Map;

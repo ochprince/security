@@ -24,42 +24,42 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.ccstest;
+package com.colasoft.opensearch.security.ccstest;
 
 import org.apache.http.HttpStatus;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.action.admin.cluster.health.ClusterHealthRequest;
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest.AliasActions;
-import org.opensearch.action.get.GetRequest;
-import org.opensearch.action.get.GetResponse;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.support.WriteRequest.RefreshPolicy;
-import org.opensearch.client.Client;
-import org.opensearch.cluster.health.ClusterHealthStatus;
-import org.opensearch.common.collect.Tuple;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.node.Node;
-import org.opensearch.node.PluginAwareNode;
-import org.opensearch.security.OpenSearchSecurityPlugin;
-import org.opensearch.security.RolesInjectorIntegTest;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.AbstractSecurityUnitTest;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.NodeSettingsSupplier;
-import org.opensearch.security.test.helper.cluster.ClusterConfiguration;
-import org.opensearch.security.test.helper.cluster.ClusterHelper;
-import org.opensearch.security.test.helper.cluster.ClusterInfo;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
-import org.opensearch.transport.Netty4Plugin;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthRequest;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest.AliasActions;
+import com.colasoft.opensearch.action.get.GetRequest;
+import com.colasoft.opensearch.action.get.GetResponse;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.cluster.health.ClusterHealthStatus;
+import com.colasoft.opensearch.common.collect.Tuple;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.node.Node;
+import com.colasoft.opensearch.node.PluginAwareNode;
+import com.colasoft.opensearch.security.OpenSearchSecurityPlugin;
+import com.colasoft.opensearch.security.RolesInjectorIntegTest;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.AbstractSecurityUnitTest;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.NodeSettingsSupplier;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterConfiguration;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterHelper;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterInfo;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.transport.Netty4Plugin;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;

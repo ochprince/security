@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.routing;
+package com.colasoft.opensearch.security.auditlog.routing;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,18 +18,18 @@ import java.util.Map;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auditlog.AbstractAuditlogiUnitTest;
-import org.opensearch.security.auditlog.helper.LoggingSink;
-import org.opensearch.security.auditlog.helper.MockAuditMessageFactory;
-import org.opensearch.security.auditlog.impl.AuditCategory;
-import org.opensearch.security.auditlog.impl.AuditMessage;
-import org.opensearch.security.auditlog.sink.AuditLogSink;
-import org.opensearch.security.auditlog.sink.DebugSink;
-import org.opensearch.security.auditlog.sink.ExternalOpenSearchSink;
-import org.opensearch.security.auditlog.sink.InternalOpenSearchSink;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auditlog.AbstractAuditlogiUnitTest;
+import com.colasoft.opensearch.security.auditlog.helper.LoggingSink;
+import com.colasoft.opensearch.security.auditlog.helper.MockAuditMessageFactory;
+import com.colasoft.opensearch.security.auditlog.impl.AuditCategory;
+import com.colasoft.opensearch.security.auditlog.impl.AuditMessage;
+import com.colasoft.opensearch.security.auditlog.sink.AuditLogSink;
+import com.colasoft.opensearch.security.auditlog.sink.DebugSink;
+import com.colasoft.opensearch.security.auditlog.sink.ExternalOpenSearchSink;
+import com.colasoft.opensearch.security.auditlog.sink.InternalOpenSearchSink;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
 
 public class RouterTest extends AbstractAuditlogiUnitTest{
 

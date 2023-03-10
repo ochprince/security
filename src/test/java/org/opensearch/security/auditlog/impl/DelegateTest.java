@@ -9,17 +9,17 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.impl;
+package com.colasoft.opensearch.security.auditlog.impl;
 
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.settings.Settings.Builder;
-import org.opensearch.security.auditlog.helper.MyOwnAuditLog;
-import org.opensearch.security.auditlog.sink.AuditLogSink;
-import org.opensearch.security.auditlog.sink.DebugSink;
-import org.opensearch.security.auditlog.sink.ExternalOpenSearchSink;
-import org.opensearch.security.auditlog.sink.InternalOpenSearchSink;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.settings.Settings.Builder;
+import com.colasoft.opensearch.security.auditlog.helper.MyOwnAuditLog;
+import com.colasoft.opensearch.security.auditlog.sink.AuditLogSink;
+import com.colasoft.opensearch.security.auditlog.sink.DebugSink;
+import com.colasoft.opensearch.security.auditlog.sink.ExternalOpenSearchSink;
+import com.colasoft.opensearch.security.auditlog.sink.InternalOpenSearchSink;
 
 public class DelegateTest {
 	@Test
@@ -27,8 +27,8 @@ public class DelegateTest {
 		testAuditType("DeBUg", DebugSink.class);
 		testAuditType("intERnal_OpenSearch", InternalOpenSearchSink.class);
 		testAuditType("EXTERnal_OpenSearch", ExternalOpenSearchSink.class);
-		testAuditType("org.opensearch.security.auditlog.sink.MyOwnAuditLog", MyOwnAuditLog.class);
-		testAuditType("org.opensearch.security.auditlog.sink.MyOwnAuditLog", null);
+		testAuditType("com.colasoft.opensearch.security.auditlog.sink.MyOwnAuditLog", MyOwnAuditLog.class);
+		testAuditType("com.colasoft.opensearch.security.auditlog.sink.MyOwnAuditLog", null);
 		testAuditType("idonotexist", null);
 	}
 

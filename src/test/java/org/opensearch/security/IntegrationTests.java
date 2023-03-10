@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import java.util.TreeSet;
 
@@ -36,28 +36,28 @@ import org.junit.Assert;
 import org.junit.Assume;
 import org.junit.Test;
 
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest.AliasActions;
-import org.opensearch.action.admin.indices.create.CreateIndexRequest;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.support.WriteRequest.RefreshPolicy;
-import org.opensearch.client.Client;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.util.concurrent.ThreadContext;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.security.action.configupdate.ConfigUpdateAction;
-import org.opensearch.security.action.configupdate.ConfigUpdateRequest;
-import org.opensearch.security.action.configupdate.ConfigUpdateResponse;
-import org.opensearch.security.http.HTTPClientCertAuthenticator;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest.AliasActions;
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.security.action.configupdate.ConfigUpdateAction;
+import com.colasoft.opensearch.security.action.configupdate.ConfigUpdateRequest;
+import com.colasoft.opensearch.security.action.configupdate.ConfigUpdateResponse;
+import com.colasoft.opensearch.security.http.HTTPClientCertAuthenticator;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
-import static org.opensearch.security.DefaultObjectMapper.readTree;
+import static com.colasoft.opensearch.security.DefaultObjectMapper.readTree;
 
 public class IntegrationTests extends SingleClusterTest {
 

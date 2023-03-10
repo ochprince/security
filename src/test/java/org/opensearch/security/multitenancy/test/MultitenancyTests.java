@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.multitenancy.test;
+package com.colasoft.opensearch.security.multitenancy.test;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,22 +20,22 @@ import org.apache.http.message.BasicHeader;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.action.admin.indices.alias.Alias;
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest.AliasActions;
-import org.opensearch.action.admin.indices.create.CreateIndexRequest;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.support.WriteRequest.RefreshPolicy;
-import org.opensearch.client.Client;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.security.DefaultObjectMapper;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.support.WildcardMatcher;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.action.admin.indices.alias.Alias;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest.AliasActions;
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.security.DefaultObjectMapper;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.support.WildcardMatcher;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;

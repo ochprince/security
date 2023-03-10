@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auth;
+package com.colasoft.opensearch.security.auth;
 
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
@@ -21,10 +21,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.security.auth.internal.InternalAuthenticationBackend;
-import org.opensearch.security.securityconf.InternalUsersModel;
-import org.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.security.auth.internal.InternalAuthenticationBackend;
+import com.colasoft.opensearch.security.securityconf.InternalUsersModel;
+import com.colasoft.opensearch.security.user.AuthCredentials;
 
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;

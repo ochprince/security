@@ -9,17 +9,17 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.helper;
+package com.colasoft.opensearch.security.auditlog.helper;
 
 import java.io.IOException;
 import java.nio.file.Path;
 
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver;
-import org.opensearch.cluster.service.ClusterService;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auditlog.impl.AuditMessage;
-import org.opensearch.security.auditlog.sink.AuditLogSink;
-import org.opensearch.threadpool.ThreadPool;
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver;
+import com.colasoft.opensearch.cluster.service.ClusterService;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auditlog.impl.AuditMessage;
+import com.colasoft.opensearch.security.auditlog.sink.AuditLogSink;
+import com.colasoft.opensearch.threadpool.ThreadPool;
 
 public class MyOwnAuditLog extends AuditLogSink {
 

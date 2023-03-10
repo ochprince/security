@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.securityconf.impl.v6;
+package com.colasoft.opensearch.security.securityconf.impl.v6;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.common.collect.ImmutableList;
@@ -18,7 +18,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
-import org.opensearch.security.DefaultObjectMapper;
+import com.colasoft.opensearch.security.DefaultObjectMapper;
 
 @RunWith(Parameterized.class)
 public class ConfigV6Test {

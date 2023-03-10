@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.test.helper.cluster;
+package com.colasoft.opensearch.security.test.helper.cluster;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -34,15 +34,15 @@ import java.util.stream.Collectors;
 
 import com.google.common.collect.Lists;
 
-import org.opensearch.index.reindex.ReindexPlugin;
-import org.opensearch.join.ParentJoinPlugin;
-import org.opensearch.percolator.PercolatorPlugin;
-import org.opensearch.plugins.Plugin;
-import org.opensearch.script.mustache.MustachePlugin;
-import org.opensearch.search.aggregations.matrix.MatrixAggregationPlugin;
-import org.opensearch.security.OpenSearchSecurityPlugin;
-import org.opensearch.security.test.plugin.UserInjectorPlugin;
-import org.opensearch.transport.Netty4Plugin;
+import com.colasoft.opensearch.index.reindex.ReindexPlugin;
+import com.colasoft.opensearch.join.ParentJoinPlugin;
+import com.colasoft.opensearch.percolator.PercolatorPlugin;
+import com.colasoft.opensearch.plugins.Plugin;
+import com.colasoft.opensearch.script.mustache.MustachePlugin;
+import com.colasoft.opensearch.search.aggregations.matrix.MatrixAggregationPlugin;
+import com.colasoft.opensearch.security.OpenSearchSecurityPlugin;
+import com.colasoft.opensearch.security.test.plugin.UserInjectorPlugin;
+import com.colasoft.opensearch.transport.Netty4Plugin;
 
 public enum ClusterConfiguration {
 	//first one needs to be a cluster manager

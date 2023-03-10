@@ -9,15 +9,15 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.cache;
+package com.colasoft.opensearch.security.cache;
 
 import java.nio.file.Path;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auth.AuthorizationBackend;
-import org.opensearch.security.user.AuthCredentials;
-import org.opensearch.security.user.User;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auth.AuthorizationBackend;
+import com.colasoft.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.security.user.User;
 
 
 public class DummyAuthorizer implements AuthorizationBackend {

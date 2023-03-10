@@ -15,7 +15,7 @@
  * 
  */
 
-package org.opensearch.security.auth.blocking;
+package com.colasoft.opensearch.security.auth.blocking;
 
 import org.junit.Test;
 

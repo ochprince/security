@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.ssl.util;
+package com.colasoft.opensearch.security.ssl.util;
 
 import java.io.IOException;
 import java.security.KeyStoreException;
@@ -20,7 +20,7 @@ import java.security.cert.CertificateException;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
 
 public class CertFromKeystoreTests {
 

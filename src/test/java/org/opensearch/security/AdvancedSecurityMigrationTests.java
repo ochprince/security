@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import java.io.File;
 import java.util.Arrays;
@@ -21,12 +21,12 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.cluster.ClusterConfiguration;
-import org.opensearch.security.test.helper.cluster.ClusterHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterConfiguration;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
 
 public class AdvancedSecurityMigrationTests extends SingleClusterTest {
 

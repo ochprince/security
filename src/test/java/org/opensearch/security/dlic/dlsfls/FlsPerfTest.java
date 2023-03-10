@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.dlsfls;
+package com.colasoft.opensearch.security.dlic.dlsfls;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -20,14 +20,14 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import org.opensearch.action.admin.indices.create.CreateIndexRequest;
-import org.opensearch.action.admin.indices.refresh.RefreshRequest;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.client.Client;
-import org.opensearch.common.StopWatch;
-import org.opensearch.common.xcontent.XContentBuilder;
-import org.opensearch.common.xcontent.json.JsonXContent;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest;
+import com.colasoft.opensearch.action.admin.indices.refresh.RefreshRequest;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.common.StopWatch;
+import com.colasoft.opensearch.common.xcontent.XContentBuilder;
+import com.colasoft.opensearch.common.xcontent.json.JsonXContent;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 @Ignore
 public class FlsPerfTest extends AbstractDlsFlsTest{

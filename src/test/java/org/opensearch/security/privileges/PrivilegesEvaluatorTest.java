@@ -9,17 +9,17 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.privileges;
+package com.colasoft.opensearch.security.privileges;
 
 import org.apache.http.Header;
 import org.apache.http.HttpStatus;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
 
 public class PrivilegesEvaluatorTest extends SingleClusterTest {
     private static final Header NegativeLookaheadUserHeader = encodeBasicHeader("negative_lookahead_user", "negative_lookahead_user");

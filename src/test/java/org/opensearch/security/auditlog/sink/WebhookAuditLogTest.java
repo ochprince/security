@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.sink;
+package com.colasoft.opensearch.security.auditlog.sink;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -32,16 +32,16 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auditlog.helper.LoggingSink;
-import org.opensearch.security.auditlog.helper.MockAuditMessageFactory;
-import org.opensearch.security.auditlog.helper.TestHttpHandler;
-import org.opensearch.security.auditlog.impl.AuditCategory;
-import org.opensearch.security.auditlog.impl.AuditMessage;
-import org.opensearch.security.auditlog.sink.WebhookSink.WebhookFormat;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auditlog.helper.LoggingSink;
+import com.colasoft.opensearch.security.auditlog.helper.MockAuditMessageFactory;
+import com.colasoft.opensearch.security.auditlog.helper.TestHttpHandler;
+import com.colasoft.opensearch.security.auditlog.impl.AuditCategory;
+import com.colasoft.opensearch.security.auditlog.impl.AuditMessage;
+import com.colasoft.opensearch.security.auditlog.sink.WebhookSink.WebhookFormat;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
 
 public class WebhookAuditLogTest {
 

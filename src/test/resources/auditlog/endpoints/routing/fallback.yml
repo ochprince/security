@@ -1,19 +1,19 @@
 plugins.security:
   audit:
-    type: org.opensearch.security.auditlog.helper.LoggingSink
+    type: com.colasoft.opensearch.security.auditlog.helper.LoggingSink
     endpoints:
       endpoint1:
-        type: org.opensearch.security.auditlog.helper.FailingSink
+        type: com.colasoft.opensearch.security.auditlog.helper.FailingSink
       endpoint2:
-        type: org.opensearch.security.auditlog.helper.LoggingSink
+        type: com.colasoft.opensearch.security.auditlog.helper.LoggingSink
       endpoint3:
-        type: org.opensearch.security.auditlog.helper.FailingSink
+        type: com.colasoft.opensearch.security.auditlog.helper.FailingSink
       endpoint4:
-        type: org.opensearch.security.auditlog.helper.LoggingSink
+        type: com.colasoft.opensearch.security.auditlog.helper.LoggingSink
       endpoint5:
-        type: org.opensearch.security.auditlog.helper.LoggingSink
+        type: com.colasoft.opensearch.security.auditlog.helper.LoggingSink
       fallback:
-        type: org.opensearch.security.auditlog.helper.LoggingSink
+        type: com.colasoft.opensearch.security.auditlog.helper.LoggingSink
     routes:
       MISSING_PRIVILEGEs:
         endpoints:
@@ -31,4 +31,4 @@ plugins.security:
           - endpoint4
           - endpoint5
     fallback:
-      type: org.opensearch.security.auditlog.helper.LoggingSink
+      type: com.colasoft.opensearch.security.auditlog.helper.LoggingSink

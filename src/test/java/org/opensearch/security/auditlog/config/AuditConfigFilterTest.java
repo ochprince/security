@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.config;
+package com.colasoft.opensearch.security.auditlog.config;
 
 import java.util.Collections;
 import java.util.EnumSet;
@@ -20,11 +20,11 @@ import java.util.function.Function;
 import com.google.common.collect.ImmutableSet;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auditlog.config.AuditConfig.Filter.FilterEntries;
-import org.opensearch.security.auditlog.impl.AuditCategory;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.support.WildcardMatcher;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auditlog.config.AuditConfig.Filter.FilterEntries;
+import com.colasoft.opensearch.security.auditlog.impl.AuditCategory;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.support.WildcardMatcher;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -32,12 +32,12 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import static org.opensearch.security.auditlog.impl.AuditCategory.AUTHENTICATED;
-import static org.opensearch.security.auditlog.impl.AuditCategory.BAD_HEADERS;
-import static org.opensearch.security.auditlog.impl.AuditCategory.FAILED_LOGIN;
-import static org.opensearch.security.auditlog.impl.AuditCategory.GRANTED_PRIVILEGES;
-import static org.opensearch.security.auditlog.impl.AuditCategory.MISSING_PRIVILEGES;
-import static org.opensearch.security.auditlog.impl.AuditCategory.SSL_EXCEPTION;
+import static com.colasoft.opensearch.security.auditlog.impl.AuditCategory.AUTHENTICATED;
+import static com.colasoft.opensearch.security.auditlog.impl.AuditCategory.BAD_HEADERS;
+import static com.colasoft.opensearch.security.auditlog.impl.AuditCategory.FAILED_LOGIN;
+import static com.colasoft.opensearch.security.auditlog.impl.AuditCategory.GRANTED_PRIVILEGES;
+import static com.colasoft.opensearch.security.auditlog.impl.AuditCategory.MISSING_PRIVILEGES;
+import static com.colasoft.opensearch.security.auditlog.impl.AuditCategory.SSL_EXCEPTION;
 
 public class AuditConfigFilterTest {
 

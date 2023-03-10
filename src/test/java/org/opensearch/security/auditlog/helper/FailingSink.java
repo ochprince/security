@@ -9,11 +9,11 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.helper;
+package com.colasoft.opensearch.security.auditlog.helper;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auditlog.impl.AuditMessage;
-import org.opensearch.security.auditlog.sink.AuditLogSink;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auditlog.impl.AuditMessage;
+import com.colasoft.opensearch.security.auditlog.sink.AuditLogSink;
 
 public class FailingSink extends AuditLogSink {
 

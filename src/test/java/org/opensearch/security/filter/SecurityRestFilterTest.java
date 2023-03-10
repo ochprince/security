@@ -9,16 +9,16 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.filter;
+package com.colasoft.opensearch.security.filter;
 
 import org.apache.http.Header;
 import org.apache.http.HttpStatus;
 import org.junit.Test;
 
-import org.opensearch.security.dlic.rest.api.AbstractRestApiUnitTest;
-import org.opensearch.security.securityconf.impl.AllowlistingSettings;
-import org.opensearch.security.securityconf.impl.WhitelistingSettings;
-import org.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.dlic.rest.api.AbstractRestApiUnitTest;
+import com.colasoft.opensearch.security.securityconf.impl.AllowlistingSettings;
+import com.colasoft.opensearch.security.securityconf.impl.WhitelistingSettings;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;

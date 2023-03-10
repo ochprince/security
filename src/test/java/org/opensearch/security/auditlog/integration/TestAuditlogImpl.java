@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.integration;
+package com.colasoft.opensearch.security.auditlog.integration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +18,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auditlog.impl.AuditMessage;
-import org.opensearch.security.auditlog.sink.AuditLogSink;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auditlog.impl.AuditMessage;
+import com.colasoft.opensearch.security.auditlog.sink.AuditLogSink;
 
 public class TestAuditlogImpl extends AuditLogSink {
 

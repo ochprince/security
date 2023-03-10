@@ -8,7 +8,7 @@
  * Modifications Copyright OpenSearch Contributors. See
  * GitHub history for details.
  */
-package org.opensearch.security.ssl.util;
+package com.colasoft.opensearch.security.ssl.util;
 
 import java.io.IOException;
 import java.io.InputStream;

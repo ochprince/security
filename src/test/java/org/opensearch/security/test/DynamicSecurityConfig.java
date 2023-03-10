@@ -24,16 +24,16 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.test;
+package com.colasoft.opensearch.security.test;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.support.WriteRequest.RefreshPolicy;
-import org.opensearch.security.securityconf.impl.CType;
-import org.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy;
+import com.colasoft.opensearch.security.securityconf.impl.CType;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
 
 public class DynamicSecurityConfig {
 

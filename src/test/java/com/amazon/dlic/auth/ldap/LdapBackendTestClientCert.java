@@ -24,10 +24,10 @@ import org.junit.Test;
 import com.amazon.dlic.auth.ldap.backend.LDAPAuthenticationBackend;
 import com.amazon.dlic.auth.ldap.util.ConfigConstants;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.ssl.util.ExceptionUtils;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.ssl.util.ExceptionUtils;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.user.AuthCredentials;
 
 @Ignore
 public class LdapBackendTestClientCert {

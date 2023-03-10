@@ -51,8 +51,11 @@ buildscript {
         opensearch_group = "com.colasoft.opensearch"
     }
     repositories {
+        maven {
+            allowInsecureProtocol(true)
+            url 'http://192.168.0.9:8081/nexus/content/groups/public'
+        }
         mavenLocal()
-        maven { url "https://aws.oss.sonatype.org/content/repositories/snapshots" }
         mavenCentral()
         maven { url "https://plugins.gradle.org/m2/" }
     }
@@ -63,8 +66,11 @@ buildscript {
 }
 
 repositories {
+    maven {
+        allowInsecureProtocol(true)
+        url 'http://192.168.0.9:8081/nexus/content/groups/public'
+    }
     mavenLocal()
-    maven { url "https://aws.oss.sonatype.org/content/repositories/snapshots" }
     mavenCentral()
     maven { url "https://plugins.gradle.org/m2/" }
 }

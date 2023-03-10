@@ -15,7 +15,7 @@
  * 
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -27,15 +27,15 @@ import org.apache.http.HttpStatus;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
-import org.opensearch.security.tools.SecurityAdmin;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.security.tools.SecurityAdmin;
 
 public class SecurityAdminTests extends SingleClusterTest {
     

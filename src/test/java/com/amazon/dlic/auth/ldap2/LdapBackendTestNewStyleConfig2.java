@@ -38,13 +38,13 @@ import com.amazon.dlic.auth.ldap.srv.EmbeddedLDAPServer;
 import com.amazon.dlic.auth.ldap.util.ConfigConstants;
 import com.amazon.dlic.auth.ldap.util.LdapHelper;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.WildcardMatcher;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.user.AuthCredentials;
-import org.opensearch.security.user.User;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.WildcardMatcher;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.security.user.User;
 
 @RunWith(Parameterized.class)
 public class LdapBackendTestNewStyleConfig2 {

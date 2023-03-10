@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import java.io.File;
 import java.util.Iterator;
@@ -36,28 +36,28 @@ import org.apache.http.client.methods.HttpGet;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.action.admin.cluster.health.ClusterHealthRequest;
-import org.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.support.WriteRequest.RefreshPolicy;
-import org.opensearch.client.Client;
-import org.opensearch.client.Request;
-import org.opensearch.client.Response;
-import org.opensearch.client.RestHighLevelClient;
-import org.opensearch.cluster.health.ClusterHealthStatus;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.transport.TransportAddress;
-import org.opensearch.security.action.configupdate.ConfigUpdateAction;
-import org.opensearch.security.action.configupdate.ConfigUpdateRequest;
-import org.opensearch.security.action.configupdate.ConfigUpdateResponse;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.cluster.ClusterHelper;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthRequest;
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.client.Request;
+import com.colasoft.opensearch.client.Response;
+import com.colasoft.opensearch.client.RestHighLevelClient;
+import com.colasoft.opensearch.cluster.health.ClusterHealthStatus;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.transport.TransportAddress;
+import com.colasoft.opensearch.security.action.configupdate.ConfigUpdateAction;
+import com.colasoft.opensearch.security.action.configupdate.ConfigUpdateRequest;
+import com.colasoft.opensearch.security.action.configupdate.ConfigUpdateResponse;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterHelper;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 public class InitializationIntegrationTests extends SingleClusterTest {
 

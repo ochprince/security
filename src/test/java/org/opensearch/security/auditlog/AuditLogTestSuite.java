@@ -9,27 +9,27 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog;
+package com.colasoft.opensearch.security.auditlog;
 
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
-import org.opensearch.security.auditlog.compliance.ComplianceAuditlogTest;
-import org.opensearch.security.auditlog.compliance.RestApiComplianceAuditlogTest;
-import org.opensearch.security.auditlog.impl.AuditlogTest;
-import org.opensearch.security.auditlog.impl.DelegateTest;
-import org.opensearch.security.auditlog.impl.DisabledCategoriesTest;
-import org.opensearch.security.auditlog.impl.IgnoreAuditUsersTest;
-import org.opensearch.security.auditlog.impl.TracingTests;
-import org.opensearch.security.auditlog.integration.BasicAuditlogTest;
-import org.opensearch.security.auditlog.integration.SSLAuditlogTest;
-import org.opensearch.security.auditlog.routing.FallbackTest;
-import org.opensearch.security.auditlog.routing.RouterTest;
-import org.opensearch.security.auditlog.routing.RoutingConfigurationTest;
-import org.opensearch.security.auditlog.sink.KafkaSinkTest;
-import org.opensearch.security.auditlog.sink.SinkProviderTLSTest;
-import org.opensearch.security.auditlog.sink.SinkProviderTest;
-import org.opensearch.security.auditlog.sink.WebhookAuditLogTest;
+import com.colasoft.opensearch.security.auditlog.compliance.ComplianceAuditlogTest;
+import com.colasoft.opensearch.security.auditlog.compliance.RestApiComplianceAuditlogTest;
+import com.colasoft.opensearch.security.auditlog.impl.AuditlogTest;
+import com.colasoft.opensearch.security.auditlog.impl.DelegateTest;
+import com.colasoft.opensearch.security.auditlog.impl.DisabledCategoriesTest;
+import com.colasoft.opensearch.security.auditlog.impl.IgnoreAuditUsersTest;
+import com.colasoft.opensearch.security.auditlog.impl.TracingTests;
+import com.colasoft.opensearch.security.auditlog.integration.BasicAuditlogTest;
+import com.colasoft.opensearch.security.auditlog.integration.SSLAuditlogTest;
+import com.colasoft.opensearch.security.auditlog.routing.FallbackTest;
+import com.colasoft.opensearch.security.auditlog.routing.RouterTest;
+import com.colasoft.opensearch.security.auditlog.routing.RoutingConfigurationTest;
+import com.colasoft.opensearch.security.auditlog.sink.KafkaSinkTest;
+import com.colasoft.opensearch.security.auditlog.sink.SinkProviderTLSTest;
+import com.colasoft.opensearch.security.auditlog.sink.SinkProviderTest;
+import com.colasoft.opensearch.security.auditlog.sink.WebhookAuditLogTest;
 
 @RunWith(Suite.class)
 

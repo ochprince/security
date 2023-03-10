@@ -15,7 +15,7 @@
  * 
  */
 
-package org.opensearch.security.ssl;
+package com.colasoft.opensearch.security.ssl;
 
 import java.util.HashSet;
 import java.util.Random;
@@ -30,19 +30,19 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import org.opensearch.action.admin.cluster.health.ClusterHealthRequest;
-import org.opensearch.action.admin.cluster.health.ClusterHealthResponse;
-import org.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.unit.TimeValue;
-import org.opensearch.node.Node;
-import org.opensearch.node.PluginAwareNode;
-import org.opensearch.security.OpenSearchSecurityPlugin;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.transport.Netty4Plugin;
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthRequest;
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthResponse;
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.unit.TimeValue;
+import com.colasoft.opensearch.node.Node;
+import com.colasoft.opensearch.node.PluginAwareNode;
+import com.colasoft.opensearch.security.OpenSearchSecurityPlugin;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.transport.Netty4Plugin;
 
 public class OpenSSLTest extends SSLTest {
     private static final String USE_NETTY_DEFAULT_ALLOCATOR_PROPERTY = "opensearch.unsafe.use_netty_default_allocator";

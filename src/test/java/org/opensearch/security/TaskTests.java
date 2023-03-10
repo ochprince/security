@@ -15,19 +15,19 @@
  * 
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import org.apache.http.HttpStatus;
 import org.apache.http.message.BasicHeader;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
-import org.opensearch.tasks.Task;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.tasks.Task;
 
 public class TaskTests extends SingleClusterTest {
     

@@ -9,11 +9,11 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.rest.api.legacy;
+package com.colasoft.opensearch.security.dlic.rest.api.legacy;
 
-import org.opensearch.security.dlic.rest.api.SecurityConfigApiTest;
+import com.colasoft.opensearch.security.dlic.rest.api.SecurityConfigApiTest;
 
-import static org.opensearch.security.OpenSearchSecurityPlugin.LEGACY_OPENDISTRO_PREFIX;
+import static com.colasoft.opensearch.security.OpenSearchSecurityPlugin.LEGACY_OPENDISTRO_PREFIX;
 
 public class LegacySecurityConfigApiTests extends SecurityConfigApiTest {
 	@Override

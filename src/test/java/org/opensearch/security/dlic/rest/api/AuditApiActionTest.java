@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.rest.api;
+package com.colasoft.opensearch.security.dlic.rest.api;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -31,19 +31,19 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.DefaultObjectMapper;
-import org.opensearch.security.auditlog.AuditTestUtils;
-import org.opensearch.security.auditlog.config.AuditConfig;
-import org.opensearch.security.compliance.ComplianceConfig;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.DefaultObjectMapper;
+import com.colasoft.opensearch.security.auditlog.AuditTestUtils;
+import com.colasoft.opensearch.security.auditlog.config.AuditConfig;
+import com.colasoft.opensearch.security.compliance.ComplianceConfig;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.opensearch.security.DefaultObjectMapper.readTree;
-import static org.opensearch.security.DefaultObjectMapper.writeValueAsString;
-import static org.opensearch.security.OpenSearchSecurityPlugin.PLUGINS_PREFIX;
+import static com.colasoft.opensearch.security.DefaultObjectMapper.readTree;
+import static com.colasoft.opensearch.security.DefaultObjectMapper.writeValueAsString;
+import static com.colasoft.opensearch.security.OpenSearchSecurityPlugin.PLUGINS_PREFIX;
 
 public class AuditApiActionTest extends AbstractRestApiUnitTest {
     // admin cred with roles in test yml files

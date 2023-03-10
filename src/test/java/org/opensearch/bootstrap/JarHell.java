@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.bootstrap;
+package com.colasoft.opensearch.bootstrap;
 
 import java.io.IOException;
 import java.net.URISyntaxException;

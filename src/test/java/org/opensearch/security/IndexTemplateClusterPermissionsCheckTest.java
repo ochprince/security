@@ -9,16 +9,16 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import org.apache.http.HttpStatus;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 public class IndexTemplateClusterPermissionsCheckTest extends SingleClusterTest{
         private RestHelper rh;

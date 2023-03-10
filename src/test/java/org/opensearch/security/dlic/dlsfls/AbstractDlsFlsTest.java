@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.dlsfls;
+package com.colasoft.opensearch.security.dlic.dlsfls;
 
 import java.util.HashSet;
 import java.util.Map;
@@ -17,21 +17,21 @@ import java.util.Set;
 
 import org.junit.Assert;
 
-import org.opensearch.action.get.GetResponse;
-import org.opensearch.action.get.MultiGetResponse;
-import org.opensearch.action.search.MultiSearchResponse;
-import org.opensearch.action.search.SearchResponse;
-import org.opensearch.client.Client;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.xcontent.LoggingDeprecationHandler;
-import org.opensearch.common.xcontent.NamedXContentRegistry;
-import org.opensearch.common.xcontent.XContentParser;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.action.get.GetResponse;
+import com.colasoft.opensearch.action.get.MultiGetResponse;
+import com.colasoft.opensearch.action.search.MultiSearchResponse;
+import com.colasoft.opensearch.action.search.SearchResponse;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler;
+import com.colasoft.opensearch.common.xcontent.NamedXContentRegistry;
+import com.colasoft.opensearch.common.xcontent.XContentParser;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 public abstract class AbstractDlsFlsTest extends SingleClusterTest {
 

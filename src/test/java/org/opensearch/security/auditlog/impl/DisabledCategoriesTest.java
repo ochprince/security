@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.impl;
+package com.colasoft.opensearch.security.auditlog.impl;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,18 +23,18 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import org.opensearch.cluster.ClusterName;
-import org.opensearch.cluster.node.DiscoveryNode;
-import org.opensearch.cluster.service.ClusterService;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.settings.Settings.Builder;
-import org.opensearch.security.auditlog.AuditLog;
-import org.opensearch.security.auditlog.AuditTestUtils;
-import org.opensearch.security.auditlog.helper.MockRestRequest;
-import org.opensearch.security.auditlog.integration.TestAuditlogImpl;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.AbstractSecurityUnitTest;
-import org.opensearch.transport.TransportRequest;
+import com.colasoft.opensearch.cluster.ClusterName;
+import com.colasoft.opensearch.cluster.node.DiscoveryNode;
+import com.colasoft.opensearch.cluster.service.ClusterService;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.settings.Settings.Builder;
+import com.colasoft.opensearch.security.auditlog.AuditLog;
+import com.colasoft.opensearch.security.auditlog.AuditTestUtils;
+import com.colasoft.opensearch.security.auditlog.helper.MockRestRequest;
+import com.colasoft.opensearch.security.auditlog.integration.TestAuditlogImpl;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.AbstractSecurityUnitTest;
+import com.colasoft.opensearch.transport.TransportRequest;
 
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.mockito.Mockito.mock;

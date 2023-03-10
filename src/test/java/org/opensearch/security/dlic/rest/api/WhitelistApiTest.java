@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.rest.api;
+package com.colasoft.opensearch.security.dlic.rest.api;
 
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -21,22 +21,22 @@ import org.apache.http.HttpStatus;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.DefaultObjectMapper;
-import org.opensearch.security.auditlog.impl.AuditCategory;
-import org.opensearch.security.auditlog.impl.AuditMessage;
-import org.opensearch.security.auditlog.integration.TestAuditlogImpl;
-import org.opensearch.security.dlic.rest.validation.AbstractConfigurationValidator;
-import org.opensearch.security.filter.SecurityRestFilter;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.DefaultObjectMapper;
+import com.colasoft.opensearch.security.auditlog.impl.AuditCategory;
+import com.colasoft.opensearch.security.auditlog.impl.AuditMessage;
+import com.colasoft.opensearch.security.auditlog.integration.TestAuditlogImpl;
+import com.colasoft.opensearch.security.dlic.rest.validation.AbstractConfigurationValidator;
+import com.colasoft.opensearch.security.filter.SecurityRestFilter;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.opensearch.security.OpenSearchSecurityPlugin.PLUGINS_PREFIX;
+import static com.colasoft.opensearch.security.OpenSearchSecurityPlugin.PLUGINS_PREFIX;
 
 /**
  * Testing class to verify that {@link WhitelistApiAction} works correctly.

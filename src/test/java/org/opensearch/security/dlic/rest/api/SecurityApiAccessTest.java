@@ -9,13 +9,13 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.rest.api;
+package com.colasoft.opensearch.security.dlic.rest.api;
 
 import org.apache.http.HttpStatus;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.opensearch.security.OpenSearchSecurityPlugin.PLUGINS_PREFIX;
+import static com.colasoft.opensearch.security.OpenSearchSecurityPlugin.PLUGINS_PREFIX;
 
 public class SecurityApiAccessTest extends AbstractRestApiUnitTest {
     private final String ENDPOINT; 

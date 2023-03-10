@@ -15,7 +15,7 @@
  * 
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import java.io.File;
 
@@ -26,23 +26,23 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.common.Strings;
-import org.opensearch.common.collect.Tuple;
-import org.opensearch.security.securityconf.Migration;
-import org.opensearch.security.securityconf.impl.CType;
-import org.opensearch.security.securityconf.impl.SecurityDynamicConfiguration;
-import org.opensearch.security.securityconf.impl.v6.ActionGroupsV6;
-import org.opensearch.security.securityconf.impl.v6.ConfigV6;
-import org.opensearch.security.securityconf.impl.v6.InternalUserV6;
-import org.opensearch.security.securityconf.impl.v6.RoleMappingsV6;
-import org.opensearch.security.securityconf.impl.v6.RoleV6;
-import org.opensearch.security.securityconf.impl.v7.ActionGroupsV7;
-import org.opensearch.security.securityconf.impl.v7.ConfigV7;
-import org.opensearch.security.securityconf.impl.v7.InternalUserV7;
-import org.opensearch.security.securityconf.impl.v7.RoleMappingsV7;
-import org.opensearch.security.securityconf.impl.v7.RoleV7;
-import org.opensearch.security.securityconf.impl.v7.TenantV7;
-import org.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.common.Strings;
+import com.colasoft.opensearch.common.collect.Tuple;
+import com.colasoft.opensearch.security.securityconf.Migration;
+import com.colasoft.opensearch.security.securityconf.impl.CType;
+import com.colasoft.opensearch.security.securityconf.impl.SecurityDynamicConfiguration;
+import com.colasoft.opensearch.security.securityconf.impl.v6.ActionGroupsV6;
+import com.colasoft.opensearch.security.securityconf.impl.v6.ConfigV6;
+import com.colasoft.opensearch.security.securityconf.impl.v6.InternalUserV6;
+import com.colasoft.opensearch.security.securityconf.impl.v6.RoleMappingsV6;
+import com.colasoft.opensearch.security.securityconf.impl.v6.RoleV6;
+import com.colasoft.opensearch.security.securityconf.impl.v7.ActionGroupsV7;
+import com.colasoft.opensearch.security.securityconf.impl.v7.ConfigV7;
+import com.colasoft.opensearch.security.securityconf.impl.v7.InternalUserV7;
+import com.colasoft.opensearch.security.securityconf.impl.v7.RoleMappingsV7;
+import com.colasoft.opensearch.security.securityconf.impl.v7.RoleV7;
+import com.colasoft.opensearch.security.securityconf.impl.v7.TenantV7;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
 
 public class ConfigTests {
     

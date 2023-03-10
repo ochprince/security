@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -19,31 +19,31 @@ import java.util.function.Supplier;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.action.admin.indices.create.CreateIndexRequest;
-import org.opensearch.action.admin.indices.create.CreateIndexResponse;
-import org.opensearch.action.admin.indices.exists.indices.IndicesExistsRequest;
-import org.opensearch.action.admin.indices.exists.indices.IndicesExistsResponse;
-import org.opensearch.client.Client;
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver;
-import org.opensearch.cluster.service.ClusterService;
-import org.opensearch.common.io.stream.NamedWriteableRegistry;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.xcontent.NamedXContentRegistry;
-import org.opensearch.env.Environment;
-import org.opensearch.env.NodeEnvironment;
-import org.opensearch.node.Node;
-import org.opensearch.node.PluginAwareNode;
-import org.opensearch.plugins.ActionPlugin;
-import org.opensearch.plugins.Plugin;
-import org.opensearch.repositories.RepositoriesService;
-import org.opensearch.script.ScriptService;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.threadpool.ThreadPool;
-import org.opensearch.transport.Netty4Plugin;
-import org.opensearch.watcher.ResourceWatcherService;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest;
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexResponse;
+import com.colasoft.opensearch.action.admin.indices.exists.indices.IndicesExistsRequest;
+import com.colasoft.opensearch.action.admin.indices.exists.indices.IndicesExistsResponse;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver;
+import com.colasoft.opensearch.cluster.service.ClusterService;
+import com.colasoft.opensearch.common.io.stream.NamedWriteableRegistry;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.xcontent.NamedXContentRegistry;
+import com.colasoft.opensearch.env.Environment;
+import com.colasoft.opensearch.env.NodeEnvironment;
+import com.colasoft.opensearch.node.Node;
+import com.colasoft.opensearch.node.PluginAwareNode;
+import com.colasoft.opensearch.plugins.ActionPlugin;
+import com.colasoft.opensearch.plugins.Plugin;
+import com.colasoft.opensearch.repositories.RepositoriesService;
+import com.colasoft.opensearch.script.ScriptService;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.threadpool.ThreadPool;
+import com.colasoft.opensearch.transport.Netty4Plugin;
+import com.colasoft.opensearch.watcher.ResourceWatcherService;
 
 public class RolesValidationIntegTest extends SingleClusterTest {
 

@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auth;
+package com.colasoft.opensearch.security.auth;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -18,15 +18,15 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.util.concurrent.ThreadContext;
-import org.opensearch.security.auditlog.AuditLog;
-import org.opensearch.security.http.XFFResolver;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.user.User;
-import org.opensearch.tasks.Task;
-import org.opensearch.threadpool.ThreadPool;
-import org.opensearch.transport.TransportRequest;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext;
+import com.colasoft.opensearch.security.auditlog.AuditLog;
+import com.colasoft.opensearch.security.http.XFFResolver;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.user.User;
+import com.colasoft.opensearch.tasks.Task;
+import com.colasoft.opensearch.threadpool.ThreadPool;
+import com.colasoft.opensearch.transport.TransportRequest;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;

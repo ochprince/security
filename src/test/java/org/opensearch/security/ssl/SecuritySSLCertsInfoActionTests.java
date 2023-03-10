@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.ssl;
+package com.colasoft.opensearch.security.ssl;
 
 import java.util.List;
 import java.util.Map;
@@ -20,12 +20,12 @@ import net.minidev.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.settings.Settings;
 import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
 import com.colasoft.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
 
 import static com.colasoft.opensearch.security.OpenSearchSecurityPlugin.LEGACY_OPENDISTRO_PREFIX;
 import static com.colasoft.opensearch.security.OpenSearchSecurityPlugin.PLUGINS_PREFIX;

@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.test.helper.file;
+package com.colasoft.opensearch.security.test.helper.file;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -46,14 +46,14 @@ import org.apache.commons.io.IOUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.opensearch.common.bytes.BytesReference;
-import org.opensearch.common.xcontent.NamedXContentRegistry;
-import org.opensearch.common.xcontent.XContentBuilder;
-import org.opensearch.common.xcontent.XContentFactory;
-import org.opensearch.common.xcontent.XContentParser;
-import org.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.common.bytes.BytesReference;
+import com.colasoft.opensearch.common.xcontent.NamedXContentRegistry;
+import com.colasoft.opensearch.common.xcontent.XContentBuilder;
+import com.colasoft.opensearch.common.xcontent.XContentFactory;
+import com.colasoft.opensearch.common.xcontent.XContentParser;
+import com.colasoft.opensearch.common.xcontent.XContentType;
 
-import static org.opensearch.common.xcontent.DeprecationHandler.THROW_UNSUPPORTED_OPERATION;
+import static com.colasoft.opensearch.common.xcontent.DeprecationHandler.THROW_UNSUPPORTED_OPERATION;
 
 public class FileHelper {
 

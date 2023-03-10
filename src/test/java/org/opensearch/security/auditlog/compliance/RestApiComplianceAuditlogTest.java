@@ -9,19 +9,19 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.compliance;
+package com.colasoft.opensearch.security.auditlog.compliance;
 
 import org.apache.http.HttpStatus;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auditlog.AbstractAuditlogiUnitTest;
-import org.opensearch.security.auditlog.impl.AuditMessage;
-import org.opensearch.security.auditlog.integration.TestAuditlogImpl;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auditlog.AbstractAuditlogiUnitTest;
+import com.colasoft.opensearch.security.auditlog.impl.AuditMessage;
+import com.colasoft.opensearch.security.auditlog.integration.TestAuditlogImpl;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 public class RestApiComplianceAuditlogTest extends AbstractAuditlogiUnitTest {
 

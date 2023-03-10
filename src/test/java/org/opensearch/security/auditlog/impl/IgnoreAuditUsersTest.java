@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.impl;
+package com.colasoft.opensearch.security.auditlog.impl;
 
 import java.net.InetSocketAddress;
 
@@ -18,17 +18,17 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import org.opensearch.action.search.SearchRequest;
-import org.opensearch.cluster.ClusterName;
-import org.opensearch.cluster.node.DiscoveryNode;
-import org.opensearch.cluster.service.ClusterService;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.transport.TransportAddress;
-import org.opensearch.security.auditlog.AuditTestUtils;
-import org.opensearch.security.auditlog.integration.TestAuditlogImpl;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.user.User;
-import org.opensearch.threadpool.ThreadPool;
+import com.colasoft.opensearch.action.search.SearchRequest;
+import com.colasoft.opensearch.cluster.ClusterName;
+import com.colasoft.opensearch.cluster.node.DiscoveryNode;
+import com.colasoft.opensearch.cluster.service.ClusterService;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.transport.TransportAddress;
+import com.colasoft.opensearch.security.auditlog.AuditTestUtils;
+import com.colasoft.opensearch.security.auditlog.integration.TestAuditlogImpl;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.user.User;
+import com.colasoft.opensearch.threadpool.ThreadPool;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;

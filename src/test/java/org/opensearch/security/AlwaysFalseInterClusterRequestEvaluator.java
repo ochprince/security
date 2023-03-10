@@ -24,13 +24,13 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import java.security.cert.X509Certificate;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.transport.InterClusterRequestEvaluator;
-import org.opensearch.transport.TransportRequest;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.transport.InterClusterRequestEvaluator;
+import com.colasoft.opensearch.transport.TransportRequest;
 
 
 public class AlwaysFalseInterClusterRequestEvaluator implements InterClusterRequestEvaluator {

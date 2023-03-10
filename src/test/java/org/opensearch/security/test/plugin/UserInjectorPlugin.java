@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.test.plugin;
+package com.colasoft.opensearch.security.test.plugin;
 
 import java.nio.file.Path;
 import java.util.Map;
@@ -32,24 +32,24 @@ import java.util.function.Supplier;
 
 import com.google.common.collect.ImmutableMap;
 
-import org.opensearch.common.network.NetworkService;
-import org.opensearch.common.settings.ClusterSettings;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.util.BigArrays;
-import org.opensearch.common.util.PageCacheRecycler;
-import org.opensearch.common.util.concurrent.ThreadContext;
-import org.opensearch.common.xcontent.NamedXContentRegistry;
-import org.opensearch.http.HttpServerTransport;
-import org.opensearch.http.HttpServerTransport.Dispatcher;
-import org.opensearch.http.netty4.Netty4HttpServerTransport;
-import org.opensearch.indices.breaker.CircuitBreakerService;
-import org.opensearch.plugins.NetworkPlugin;
-import org.opensearch.plugins.Plugin;
-import org.opensearch.rest.RestChannel;
-import org.opensearch.rest.RestRequest;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.threadpool.ThreadPool;
-import org.opensearch.transport.SharedGroupFactory;
+import com.colasoft.opensearch.common.network.NetworkService;
+import com.colasoft.opensearch.common.settings.ClusterSettings;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.util.BigArrays;
+import com.colasoft.opensearch.common.util.PageCacheRecycler;
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext;
+import com.colasoft.opensearch.common.xcontent.NamedXContentRegistry;
+import com.colasoft.opensearch.http.HttpServerTransport;
+import com.colasoft.opensearch.http.HttpServerTransport.Dispatcher;
+import com.colasoft.opensearch.http.netty4.Netty4HttpServerTransport;
+import com.colasoft.opensearch.indices.breaker.CircuitBreakerService;
+import com.colasoft.opensearch.plugins.NetworkPlugin;
+import com.colasoft.opensearch.plugins.Plugin;
+import com.colasoft.opensearch.rest.RestChannel;
+import com.colasoft.opensearch.rest.RestRequest;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.threadpool.ThreadPool;
+import com.colasoft.opensearch.transport.SharedGroupFactory;
 
 /**
  * Mimics the behavior of system integrators that run their own plugins (i.e. server transports)
@@ -74,7 +74,7 @@ public class UserInjectorPlugin extends Plugin implements NetworkPlugin {
             NetworkService networkService, Dispatcher dispatcher, ClusterSettings clusterSettings) {
 
         final UserInjectingDispatcher validatingDispatcher = new UserInjectingDispatcher(dispatcher);
-        return ImmutableMap.of("org.opensearch.security.http.UserInjectingServerTransport",
+        return ImmutableMap.of("com.colasoft.opensearch.security.http.UserInjectingServerTransport",
                 () -> new UserInjectingServerTransport(settings, networkService, bigArrays, threadPool, xContentRegistry, validatingDispatcher, clusterSettings, sharedGroupFactory));
     }
     

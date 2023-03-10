@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.impl;
+package com.colasoft.opensearch.security.auditlog.impl;
 
 import java.nio.ByteBuffer;
 import java.util.Collections;
@@ -21,14 +21,14 @@ import com.google.common.collect.ImmutableMap;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.opensearch.cluster.ClusterName;
-import org.opensearch.cluster.node.DiscoveryNode;
-import org.opensearch.cluster.service.ClusterService;
-import org.opensearch.common.bytes.BytesReference;
-import org.opensearch.common.collect.Tuple;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.security.auditlog.AuditLog;
-import org.opensearch.security.securityconf.impl.CType;
+import com.colasoft.opensearch.cluster.ClusterName;
+import com.colasoft.opensearch.cluster.node.DiscoveryNode;
+import com.colasoft.opensearch.cluster.service.ClusterService;
+import com.colasoft.opensearch.common.bytes.BytesReference;
+import com.colasoft.opensearch.common.collect.Tuple;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.security.auditlog.AuditLog;
+import com.colasoft.opensearch.security.securityconf.impl.CType;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;

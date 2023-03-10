@@ -8,7 +8,7 @@
  * Modifications Copyright OpenSearch Contributors. See
  * GitHub history for details.
  */
-package org.opensearch.security.support;
+package com.colasoft.opensearch.security.support;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,9 +18,9 @@ import org.junit.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
-import static org.opensearch.security.support.SecurityUtils.ENVBASE64_PATTERN;
-import static org.opensearch.security.support.SecurityUtils.ENVBC_PATTERN;
-import static org.opensearch.security.support.SecurityUtils.ENV_PATTERN;
+import static com.colasoft.opensearch.security.support.SecurityUtils.ENVBASE64_PATTERN;
+import static com.colasoft.opensearch.security.support.SecurityUtils.ENVBC_PATTERN;
+import static com.colasoft.opensearch.security.support.SecurityUtils.ENV_PATTERN;
 
 public class SecurityUtilsTest {
 

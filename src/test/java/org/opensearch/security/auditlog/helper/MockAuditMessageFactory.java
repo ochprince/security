@@ -9,17 +9,17 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.helper;
+package com.colasoft.opensearch.security.auditlog.helper;
 
 import java.net.InetSocketAddress;
 
-import org.opensearch.cluster.ClusterName;
-import org.opensearch.cluster.node.DiscoveryNode;
-import org.opensearch.cluster.service.ClusterService;
-import org.opensearch.common.transport.TransportAddress;
-import org.opensearch.security.auditlog.AuditLog.Origin;
-import org.opensearch.security.auditlog.impl.AuditCategory;
-import org.opensearch.security.auditlog.impl.AuditMessage;
+import com.colasoft.opensearch.cluster.ClusterName;
+import com.colasoft.opensearch.cluster.node.DiscoveryNode;
+import com.colasoft.opensearch.cluster.service.ClusterService;
+import com.colasoft.opensearch.common.transport.TransportAddress;
+import com.colasoft.opensearch.security.auditlog.AuditLog.Origin;
+import com.colasoft.opensearch.security.auditlog.impl.AuditCategory;
+import com.colasoft.opensearch.security.auditlog.impl.AuditMessage;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;

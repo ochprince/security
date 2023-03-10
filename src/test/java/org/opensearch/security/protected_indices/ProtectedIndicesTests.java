@@ -25,7 +25,7 @@
  *
  */
 
-package org.opensearch.security.protected_indices;
+package com.colasoft.opensearch.security.protected_indices;
 
 import java.util.Arrays;
 import java.util.List;
@@ -34,25 +34,25 @@ import org.apache.http.Header;
 import org.apache.http.HttpStatus;
 import org.junit.Test;
 
-import org.opensearch.action.admin.cluster.repositories.put.PutRepositoryRequest;
-import org.opensearch.action.admin.cluster.snapshots.create.CreateSnapshotRequest;
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
-import org.opensearch.action.admin.indices.close.CloseIndexRequest;
-import org.opensearch.action.admin.indices.create.CreateIndexRequest;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.search.SearchResponse;
-import org.opensearch.action.support.WriteRequest;
-import org.opensearch.client.Client;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.xcontent.LoggingDeprecationHandler;
-import org.opensearch.common.xcontent.NamedXContentRegistry;
-import org.opensearch.common.xcontent.XContentParser;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.rest.RestStatus;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.action.admin.cluster.repositories.put.PutRepositoryRequest;
+import com.colasoft.opensearch.action.admin.cluster.snapshots.create.CreateSnapshotRequest;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
+import com.colasoft.opensearch.action.admin.indices.close.CloseIndexRequest;
+import com.colasoft.opensearch.action.admin.indices.create.CreateIndexRequest;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.search.SearchResponse;
+import com.colasoft.opensearch.action.support.WriteRequest;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.xcontent.LoggingDeprecationHandler;
+import com.colasoft.opensearch.common.xcontent.NamedXContentRegistry;
+import com.colasoft.opensearch.common.xcontent.XContentParser;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.rest.RestStatus;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;

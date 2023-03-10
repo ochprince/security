@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.test.helper.rules;
+package com.colasoft.opensearch.security.test.helper.rules;
 
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;

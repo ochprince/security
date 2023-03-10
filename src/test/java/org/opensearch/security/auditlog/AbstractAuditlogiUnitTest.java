@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog;
+package com.colasoft.opensearch.security.auditlog;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -17,17 +17,17 @@ import java.util.Collection;
 import com.fasterxml.jackson.databind.JsonNode;
 import org.apache.http.Header;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.DefaultObjectMapper;
-import org.opensearch.security.auditlog.config.AuditConfig;
-import org.opensearch.security.auditlog.impl.AuditMessage;
-import org.opensearch.security.auditlog.routing.AuditMessageRouter;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.DefaultObjectMapper;
+import com.colasoft.opensearch.security.auditlog.config.AuditConfig;
+import com.colasoft.opensearch.security.auditlog.impl.AuditMessage;
+import com.colasoft.opensearch.security.auditlog.routing.AuditMessageRouter;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
 
-import static org.opensearch.security.auditlog.config.AuditConfig.DEPRECATED_KEYS;
+import static com.colasoft.opensearch.security.auditlog.config.AuditConfig.DEPRECATED_KEYS;
 
 public abstract class AbstractAuditlogiUnitTest extends SingleClusterTest {
 

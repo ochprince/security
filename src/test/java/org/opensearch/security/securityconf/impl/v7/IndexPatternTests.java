@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.securityconf.impl.v7;
+package com.colasoft.opensearch.security.securityconf.impl.v7;
 
 import java.util.Arrays;
 import java.util.Set;
@@ -24,15 +24,15 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.quality.Strictness;
 
-import org.opensearch.action.support.IndicesOptions;
-import org.opensearch.cluster.ClusterState;
-import org.opensearch.cluster.metadata.IndexAbstraction;
-import org.opensearch.cluster.metadata.IndexAbstraction.Type;
-import org.opensearch.cluster.metadata.IndexNameExpressionResolver;
-import org.opensearch.cluster.metadata.Metadata;
-import org.opensearch.cluster.service.ClusterService;
-import org.opensearch.security.securityconf.ConfigModelV7.IndexPattern;
-import org.opensearch.security.user.User;
+import com.colasoft.opensearch.action.support.IndicesOptions;
+import com.colasoft.opensearch.cluster.ClusterState;
+import com.colasoft.opensearch.cluster.metadata.IndexAbstraction;
+import com.colasoft.opensearch.cluster.metadata.IndexAbstraction.Type;
+import com.colasoft.opensearch.cluster.metadata.IndexNameExpressionResolver;
+import com.colasoft.opensearch.cluster.metadata.Metadata;
+import com.colasoft.opensearch.cluster.service.ClusterService;
+import com.colasoft.opensearch.security.securityconf.ConfigModelV7.IndexPattern;
+import com.colasoft.opensearch.security.user.User;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;

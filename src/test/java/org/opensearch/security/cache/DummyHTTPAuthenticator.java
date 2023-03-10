@@ -9,17 +9,17 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.cache;
+package com.colasoft.opensearch.security.cache;
 
 import java.nio.file.Path;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.util.concurrent.ThreadContext;
-import org.opensearch.rest.RestChannel;
-import org.opensearch.rest.RestRequest;
-import org.opensearch.security.auth.HTTPAuthenticator;
-import org.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext;
+import com.colasoft.opensearch.rest.RestChannel;
+import com.colasoft.opensearch.rest.RestRequest;
+import com.colasoft.opensearch.security.auth.HTTPAuthenticator;
+import com.colasoft.opensearch.security.user.AuthCredentials;
 
 public class DummyHTTPAuthenticator implements HTTPAuthenticator {
 

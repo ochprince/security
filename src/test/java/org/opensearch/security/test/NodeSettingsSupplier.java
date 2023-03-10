@@ -24,9 +24,9 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.test;
+package com.colasoft.opensearch.security.test;
 
-import org.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.settings.Settings;
 
 @FunctionalInterface
 public interface NodeSettingsSupplier {

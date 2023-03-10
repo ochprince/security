@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.config;
+package com.colasoft.opensearch.security.auditlog.config;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -24,21 +24,21 @@ import com.google.common.collect.ImmutableSet;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.opensearch.common.Strings;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.xcontent.XContentBuilder;
-import org.opensearch.common.xcontent.XContentFactory;
-import org.opensearch.security.auditlog.impl.AuditCategory;
-import org.opensearch.security.compliance.ComplianceConfig;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.support.WildcardMatcher;
+import com.colasoft.opensearch.common.Strings;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.xcontent.XContentBuilder;
+import com.colasoft.opensearch.common.xcontent.XContentFactory;
+import com.colasoft.opensearch.security.auditlog.impl.AuditCategory;
+import com.colasoft.opensearch.security.compliance.ComplianceConfig;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.support.WildcardMatcher;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
-import static org.opensearch.security.auditlog.impl.AuditCategory.AUTHENTICATED;
-import static org.opensearch.security.auditlog.impl.AuditCategory.GRANTED_PRIVILEGES;
+import static com.colasoft.opensearch.security.auditlog.impl.AuditCategory.AUTHENTICATED;
+import static com.colasoft.opensearch.security.auditlog.impl.AuditCategory.GRANTED_PRIVILEGES;
 
 public class AuditConfigSerializeTest {
 

@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.test;
+package com.colasoft.opensearch.security.test;
 
 import java.io.File;
 import java.util.List;
@@ -32,12 +32,12 @@ import java.util.List;
 import org.junit.After;
 import org.junit.Assert;
 
-import org.opensearch.client.Client;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.test.helper.cluster.ClusterConfiguration;
-import org.opensearch.security.test.helper.cluster.ClusterHelper;
-import org.opensearch.security.test.helper.cluster.ClusterInfo;
-import org.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterConfiguration;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterHelper;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterInfo;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
 
 public abstract class SingleClusterTest extends AbstractSecurityUnitTest {
 

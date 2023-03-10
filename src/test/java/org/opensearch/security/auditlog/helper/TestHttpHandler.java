@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.helper;
+package com.colasoft.opensearch.security.auditlog.helper;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

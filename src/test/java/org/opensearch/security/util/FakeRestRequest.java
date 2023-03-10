@@ -9,15 +9,15 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.util;
+package com.colasoft.opensearch.security.util;
 
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.opensearch.common.bytes.BytesReference;
-import org.opensearch.rest.RestRequest;
+import com.colasoft.opensearch.common.bytes.BytesReference;
+import com.colasoft.opensearch.rest.RestRequest;
 
 public class FakeRestRequest extends RestRequest {
 

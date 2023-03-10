@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.test.helper.rest;
+package com.colasoft.opensearch.security.test.helper.rest;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -74,9 +74,9 @@ import org.apache.http.ssl.SSLContexts;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.opensearch.security.DefaultObjectMapper;
-import org.opensearch.security.test.helper.cluster.ClusterInfo;
-import org.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.DefaultObjectMapper;
+import com.colasoft.opensearch.security.test.helper.cluster.ClusterInfo;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
 
 import static org.junit.jupiter.api.Assertions.fail;
 

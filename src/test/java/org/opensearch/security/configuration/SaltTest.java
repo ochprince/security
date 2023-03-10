@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.configuration;
+package com.colasoft.opensearch.security.configuration;
 
 import java.nio.charset.StandardCharsets;
 
@@ -17,13 +17,13 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import org.opensearch.OpenSearchException;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.OpenSearchException;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.support.ConfigConstants;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
-import static org.opensearch.security.configuration.Salt.SALT_SIZE;
+import static com.colasoft.opensearch.security.configuration.Salt.SALT_SIZE;
 
 public class SaltTest {
 

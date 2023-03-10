@@ -9,13 +9,13 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.helper;
+package com.colasoft.opensearch.security.auditlog.helper;
 
 import java.util.Collections;
 
-import org.opensearch.common.bytes.BytesReference;
-import org.opensearch.common.xcontent.NamedXContentRegistry;
-import org.opensearch.rest.RestRequest;
+import com.colasoft.opensearch.common.bytes.BytesReference;
+import com.colasoft.opensearch.common.xcontent.NamedXContentRegistry;
+import com.colasoft.opensearch.rest.RestRequest;
 
 public class MockRestRequest extends RestRequest {
 

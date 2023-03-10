@@ -9,25 +9,25 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.auditlog.impl;
+package com.colasoft.opensearch.security.auditlog.impl;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import org.opensearch.action.admin.cluster.health.ClusterHealthRequest;
-import org.opensearch.action.search.SearchRequest;
-import org.opensearch.cluster.ClusterName;
-import org.opensearch.cluster.node.DiscoveryNode;
-import org.opensearch.cluster.service.ClusterService;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.rest.RestRequest;
-import org.opensearch.security.auditlog.AuditTestUtils;
-import org.opensearch.security.auditlog.helper.RetrySink;
-import org.opensearch.security.auditlog.integration.TestAuditlogImpl;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.AbstractSecurityUnitTest;
-import org.opensearch.transport.TransportRequest;
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthRequest;
+import com.colasoft.opensearch.action.search.SearchRequest;
+import com.colasoft.opensearch.cluster.ClusterName;
+import com.colasoft.opensearch.cluster.node.DiscoveryNode;
+import com.colasoft.opensearch.cluster.service.ClusterService;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.rest.RestRequest;
+import com.colasoft.opensearch.security.auditlog.AuditTestUtils;
+import com.colasoft.opensearch.security.auditlog.helper.RetrySink;
+import com.colasoft.opensearch.security.auditlog.integration.TestAuditlogImpl;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.AbstractSecurityUnitTest;
+import com.colasoft.opensearch.transport.TransportRequest;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;

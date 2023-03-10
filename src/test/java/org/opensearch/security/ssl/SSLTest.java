@@ -15,7 +15,7 @@
  * 
  */
 
-package org.opensearch.security.ssl;
+package com.colasoft.opensearch.security.ssl;
 
 import java.net.SocketException;
 import java.nio.file.Paths;
@@ -39,27 +39,27 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.action.admin.cluster.health.ClusterHealthRequest;
-import org.opensearch.action.admin.cluster.health.ClusterHealthResponse;
-import org.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.search.SearchRequest;
-import org.opensearch.action.support.WriteRequest.RefreshPolicy;
-import org.opensearch.client.Client;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.unit.TimeValue;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.node.Node;
-import org.opensearch.node.PluginAwareNode;
-import org.opensearch.security.OpenSearchSecurityPlugin;
-import org.opensearch.security.ssl.util.ExceptionUtils;
-import org.opensearch.security.ssl.util.SSLConfigConstants;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.transport.Netty4Plugin;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthRequest;
+import com.colasoft.opensearch.action.admin.cluster.health.ClusterHealthResponse;
+import com.colasoft.opensearch.action.admin.cluster.node.info.NodesInfoRequest;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.search.SearchRequest;
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.unit.TimeValue;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.node.Node;
+import com.colasoft.opensearch.node.PluginAwareNode;
+import com.colasoft.opensearch.security.OpenSearchSecurityPlugin;
+import com.colasoft.opensearch.security.ssl.util.ExceptionUtils;
+import com.colasoft.opensearch.security.ssl.util.SSLConfigConstants;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.transport.Netty4Plugin;
 
 @SuppressWarnings({"resource", "unchecked"})
 public class SSLTest extends SingleClusterTest {
@@ -596,7 +596,7 @@ public class SSLTest extends SingleClusterTest {
                 .put(SSLConfigConstants.SECURITY_SSL_TRANSPORT_TRUSTSTORE_FILEPATH, FileHelper. getAbsoluteFilePathFromClassPath("ssl/truststore.jks"))
                 .put("plugins.security.ssl.transport.enforce_hostname_verification", false)
                 .put("plugins.security.ssl.transport.resolve_hostname", false)
-                .put("plugins.security.ssl.transport.principal_extractor_class", "org.opensearch.security.ssl.TestPrincipalExtractor")
+                .put("plugins.security.ssl.transport.principal_extractor_class", "com.colasoft.opensearch.security.ssl.TestPrincipalExtractor")
                 .put(SSLConfigConstants.SECURITY_SSL_HTTP_KEYSTORE_ALIAS, "node-0")
                 .put("plugins.security.ssl.http.enabled", true)
                 .put("plugins.security.ssl.http.keystore_filepath", FileHelper. getAbsoluteFilePathFromClassPath("ssl/node-0-keystore.jks"))

@@ -15,11 +15,11 @@
  * 
  */
 
-package org.opensearch.security.ssl;
+package com.colasoft.opensearch.security.ssl;
 
 import java.security.cert.X509Certificate;
 
-import org.opensearch.security.ssl.transport.PrincipalExtractor;
+import com.colasoft.opensearch.security.ssl.transport.PrincipalExtractor;
 
 public class TestPrincipalExtractor implements PrincipalExtractor {
 

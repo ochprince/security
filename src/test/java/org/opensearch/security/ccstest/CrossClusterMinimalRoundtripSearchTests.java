@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.ccstest;
+package com.colasoft.opensearch.security.ccstest;
 
 public class CrossClusterMinimalRoundtripSearchTests extends CrossClusterSearchTests {
     @Override

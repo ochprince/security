@@ -9,11 +9,11 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security.dlic.rest.api.legacy;
+package com.colasoft.opensearch.security.dlic.rest.api.legacy;
 
-import org.opensearch.security.dlic.rest.api.TenantInfoActionTest;
+import com.colasoft.opensearch.security.dlic.rest.api.TenantInfoActionTest;
 
-import static org.opensearch.security.OpenSearchSecurityPlugin.LEGACY_OPENDISTRO_PREFIX;
+import static com.colasoft.opensearch.security.OpenSearchSecurityPlugin.LEGACY_OPENDISTRO_PREFIX;
 
 public class LegacyTenantInfoActionTests extends TenantInfoActionTest {
 	@Override

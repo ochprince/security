@@ -24,7 +24,7 @@
  * GitHub history for details.
  */
 
-package org.opensearch.security;
+package com.colasoft.opensearch.security;
 
 import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
@@ -36,24 +36,24 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
-import org.opensearch.action.admin.indices.alias.IndicesAliasesRequest.AliasActions;
-import org.opensearch.action.admin.indices.delete.DeleteIndexRequest;
-import org.opensearch.action.index.IndexRequest;
-import org.opensearch.action.support.WriteRequest.RefreshPolicy;
-import org.opensearch.client.Client;
-import org.opensearch.cluster.health.ClusterHealthStatus;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.unit.TimeValue;
-import org.opensearch.common.xcontent.XContentType;
-import org.opensearch.index.query.QueryBuilders;
-import org.opensearch.indices.InvalidIndexNameException;
-import org.opensearch.security.support.ConfigConstants;
-import org.opensearch.security.support.SecurityUtils;
-import org.opensearch.security.test.DynamicSecurityConfig;
-import org.opensearch.security.test.SingleClusterTest;
-import org.opensearch.security.test.helper.rest.RestHelper;
-import org.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest;
+import com.colasoft.opensearch.action.admin.indices.alias.IndicesAliasesRequest.AliasActions;
+import com.colasoft.opensearch.action.admin.indices.delete.DeleteIndexRequest;
+import com.colasoft.opensearch.action.index.IndexRequest;
+import com.colasoft.opensearch.action.support.WriteRequest.RefreshPolicy;
+import com.colasoft.opensearch.client.Client;
+import com.colasoft.opensearch.cluster.health.ClusterHealthStatus;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.unit.TimeValue;
+import com.colasoft.opensearch.common.xcontent.XContentType;
+import com.colasoft.opensearch.index.query.QueryBuilders;
+import com.colasoft.opensearch.indices.InvalidIndexNameException;
+import com.colasoft.opensearch.security.support.ConfigConstants;
+import com.colasoft.opensearch.security.support.SecurityUtils;
+import com.colasoft.opensearch.security.test.DynamicSecurityConfig;
+import com.colasoft.opensearch.security.test.SingleClusterTest;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper;
+import com.colasoft.opensearch.security.test.helper.rest.RestHelper.HttpResponse;
 
 public class IndexIntegrationTests extends SingleClusterTest {
 

@@ -24,13 +24,13 @@
  * GitHub history for details.
  */
 
-package org.opensearch.node;
+package com.colasoft.opensearch.node;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.plugins.Plugin;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.plugins.Plugin;
 
 public class PluginAwareNode extends Node {
     
