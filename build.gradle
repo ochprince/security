@@ -197,6 +197,27 @@ loggerUsageCheck.enabled = false
 tasks.matching {it.path in [":validateMavenPom", ":validateNebulaPom", ":validatePluginZipPom"]}.all { task ->
     task.dependsOn ':generatePomFileForNebulaPublication', ':generatePomFileForPluginZipPublication', ':generatePomFileForMavenPublication'
 }
+tasks.matching {it.path in [":publishMavenPublicationToZipStagingRepository"]}.all { task ->
+    task.dependsOn 'generatePomFileForNebulaPublication', 'generatePomFileForPluginZipPublication'
+}
+tasks.matching {it.path in [":publishMavenPublicationToReleaseRepository"]}.all { task ->
+    task.dependsOn 'generatePomFileForNebulaPublication'
+}
+tasks.matching {it.path in [":publishNebulaPublicationToReleaseRepository"]}.all { task ->
+    task.dependsOn 'generatePomFileForMavenPublication', 'generatePomFileForPluginZipPublication'
+}
+tasks.matching {it.path in [":publishNebulaPublicationToZipStagingRepository"]}.all { task ->
+    task.dependsOn 'generatePomFileForMavenPublication', 'generatePomFileForPluginZipPublication'
+}
+tasks.matching {it.path in [":publishMavenPublicationToReleaseRepository"]}.all { task ->
+    task.dependsOn 'generatePomFileForPluginZipPublication'
+}
+tasks.matching {it.path in [":publishPluginZipPublicationToReleaseRepository"]}.all { task ->
+    task.dependsOn 'generatePomFileForMavenPublication'
+}
+tasks.matching {it.path in [":publishPluginZipPublicationToZipStagingRepository"]}.all { task ->
+    task.dependsOn 'generatePomFileForMavenPublication'
+}
 
 publishing {
     publications {
