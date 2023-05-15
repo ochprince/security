@@ -9,19 +9,19 @@
  * GitHub history for details.
  */
 
-import org.opensearch.gradle.test.RestIntegTestTask
+import com.colasoft.opensearch.gradle.test.RestIntegTestTask
 
 buildscript {
     ext {
-        opensearch_version = System.getProperty("opensearch.version", "2.7.0-SNAPSHOT")
-        isSnapshot = "true" == System.getProperty("build.snapshot", "true")
+        opensearch_version = System.getProperty("opensearch.version", "2.7.0")
+        isSnapshot = "true" == System.getProperty("build.snapshot", "false")
         buildVersionQualifier = System.getProperty("build.version_qualifier", "")
 
         // 2.0.0-rc1-SNAPSHOT -> 2.0.0.0-rc1-SNAPSHOT
         version_tokens = opensearch_version.tokenize('-')
         opensearch_build = version_tokens[0] + '.0'
 
-        common_utils_version = System.getProperty("common_utils.version", '2.1.0.0')
+        common_utils_version = System.getProperty("common_utils.version", '2.7.0.0')
         kafka_version  = '3.4.0'
 
         if (buildVersionQualifier) {
@@ -33,15 +33,18 @@ buildscript {
     }
 
     repositories {
+        maven {
+            allowInsecureProtocol(true)
+            url 'http://192.168.0.9:8081/nexus/content/groups/public'
+        }
         mavenCentral()
         mavenLocal()
         maven { url "https://plugins.gradle.org/m2/" }
-        maven { url "https://aws.oss.sonatype.org/content/repositories/snapshots" }
         maven { url "https://d1nvenhzbhpy0q.cloudfront.net/snapshots/lucene/" }
     }
 
     dependencies {
-        classpath "org.opensearch.gradle:build-tools:${opensearch_version}"
+        classpath "com.colasoft.opensearch.gradle:build-tools:${opensearch_version}"
     }
 }
 
@@ -59,7 +62,7 @@ plugins {
 }
 
 allprojects {
-    group = "org.opensearch"
+    group = "com.colasoft.opensearch"
     version = opensearch_build
 }
 
@@ -74,7 +77,7 @@ noticeFile = rootProject.file('NOTICE.txt')
 spotless {
   java {
     // note: you can use an empty string for all the imports you didn't specify explicitly, and '\\#` prefix for static imports
-    importOrder('java', 'javax', '', 'com.amazon', 'org.opensearch', '\\#')
+    importOrder('java', 'javax', '', 'com.amazon', 'com.colasoft.opensearch', '\\#')
   }
 }
 
@@ -106,8 +109,8 @@ jarHell.enabled = false
 test {
     include '**/*.class'
     filter {
-        excludeTestsMatching "org.opensearch.security.sanity.tests.*"
-        excludeTestsMatching "org.opensearch.security.ssl.OpenSSL*"
+        excludeTestsMatching "com.colasoft.opensearch.security.sanity.tests.*"
+        excludeTestsMatching "com.colasoft.opensearch.security.ssl.OpenSSL*"
     }
     maxParallelForks = 8
     jvmArgs += "-Xmx3072m"
@@ -184,7 +187,7 @@ checkstyle {
 opensearchplugin {
     name 'opensearch-security'
     description 'Provide access control related features for OpenSearch'
-    classname 'org.opensearch.security.OpenSearchSecurityPlugin'
+    classname 'com.colasoft.opensearch.security.OpenSearchSecurityPlugin'
 }
 
 // This requires an additional Jar not published as part of build-tools
@@ -201,7 +204,7 @@ publishing {
             pom {
                 name = "opensearch-security"
                 description = "Provide access control related features for OpenSearch"
-                groupId = "org.opensearch.plugin"
+                groupId = "com.colasoft.opensearch.plugin"
                 licenses {
                     license {
                         name = "The Apache License, Version 2.0"
@@ -219,21 +222,25 @@ publishing {
     }
     repositories {
         maven {
-            name = "Snapshots" //  optional target repository name
-            url = "https://aws.oss.sonatype.org/content/repositories/snapshots"
+            setAllowInsecureProtocol(true)
+            name = 'release'
+            url = 'http://192.168.0.9:8081/nexus/content/repositories/sm_release_repositories'
             credentials {
-                username "$System.env.SONATYPE_USERNAME"
-                password "$System.env.SONATYPE_PASSWORD"
+                username 'sm_admin'
+                password 'p[-sdko12}(9K'
             }
         }
     }
 }
 
 repositories {
+    maven {
+        allowInsecureProtocol(true)
+        url 'http://192.168.0.9:8081/nexus/content/groups/public'
+    }
     mavenCentral()
     mavenLocal()
     maven { url "https://plugins.gradle.org/m2/" }
-    maven { url "https://aws.oss.sonatype.org/content/repositories/snapshots" }
     maven { url "https://d1nvenhzbhpy0q.cloudfront.net/snapshots/lucene/" }
 }
 
@@ -290,8 +297,8 @@ configurations.all {
 
 dependencies {
     implementation 'jakarta.annotation:jakarta.annotation-api:1.3.5'
-    implementation "org.opensearch.plugin:transport-netty4-client:${opensearch_version}"
-    implementation "org.opensearch.client:opensearch-rest-high-level-client:${opensearch_version}"
+    implementation "com.colasoft.opensearch.plugin:transport-netty4-client:${opensearch_version}"
+    implementation "com.colasoft.opensearch.client:opensearch-rest-high-level-client:${opensearch_version}"
     implementation 'com.google.guava:guava:30.0-jre'
     implementation 'org.greenrobot:eventbus:3.2.0'
     implementation 'commons-cli:commons-cli:1.3.1'
@@ -371,12 +378,12 @@ dependencies {
 
 
     implementation 'org.apache.commons:commons-lang3:3.4'
-    testImplementation "org.opensearch.plugin:reindex-client:${opensearch_version}"
-    testImplementation "org.opensearch:opensearch-ssl-config:${opensearch_version}"
-    testImplementation "org.opensearch.plugin:percolator-client:${opensearch_version}"
-    testImplementation "org.opensearch.plugin:lang-mustache-client:${opensearch_version}"
-    testImplementation "org.opensearch.plugin:parent-join-client:${opensearch_version}"
-    testImplementation "org.opensearch.plugin:aggs-matrix-stats-client:${opensearch_version}"
+    testImplementation "com.colasoft.opensearch.plugin:reindex-client:${opensearch_version}"
+    testImplementation "com.colasoft.opensearch:opensearch-ssl-config:${opensearch_version}"
+    testImplementation "com.colasoft.opensearch.plugin:percolator-client:${opensearch_version}"
+    testImplementation "com.colasoft.opensearch.plugin:lang-mustache-client:${opensearch_version}"
+    testImplementation "com.colasoft.opensearch.plugin:parent-join-client:${opensearch_version}"
+    testImplementation "com.colasoft.opensearch.plugin:aggs-matrix-stats-client:${opensearch_version}"
     testImplementation 'org.apache.logging.log4j:log4j-core:2.17.1'
     testImplementation 'commons-io:commons-io:2.7'
     testImplementation 'javax.servlet:servlet-api:2.5'
@@ -393,7 +400,7 @@ dependencies {
     testImplementation 'org.springframework:spring-beans:5.3.20'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
-    testImplementation "org.opensearch:common-utils:${common_utils_version}"
+    testImplementation "com.colasoft.opensearch:common-utils:${common_utils_version}"
     // Only osx-x86_64, osx-aarch_64, linux-x86_64, linux-aarch_64, windows-x86_64 are available
     if (osdetector.classifier in ["osx-x86_64", "osx-aarch_64", "linux-x86_64", "linux-aarch_64", "windows-x86_64"]) {
         testImplementation "io.netty:netty-tcnative-classes:2.0.54.Final"
@@ -416,7 +423,7 @@ dependencies {
     implementation "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}"
     implementation "com.fasterxml.jackson.core:jackson-databind:${versions.jackson_databind}"
 
-    compileOnly "org.opensearch:opensearch:${opensearch_version}"
+    compileOnly "com.colasoft.opensearch:opensearch:${opensearch_version}"
 }
 
 jar {
@@ -501,7 +508,7 @@ task integTestRemote(type: RestIntegTestTask) {
     systemProperty "security.enabled", "true"
 
     filter {
-        setIncludePatterns("org.opensearch.security.sanity.tests.*IT")
+        setIncludePatterns("com.colasoft.opensearch.security.sanity.tests.*IT")
     }
 }
 

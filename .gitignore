@@ -43,3 +43,4 @@ out/
 build/
 gradle-build/
 .gradle/
+gradle/wrapper/gradle-8.0.2-bin.zip

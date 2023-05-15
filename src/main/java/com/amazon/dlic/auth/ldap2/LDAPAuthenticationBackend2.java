@@ -38,14 +38,14 @@ import com.amazon.dlic.auth.ldap.util.ConfigConstants;
 import com.amazon.dlic.auth.ldap.util.Utils;
 import com.amazon.dlic.util.SettingsBasedSSLConfigurator.SSLConfigException;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.SpecialPermission;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.auth.AuthenticationBackend;
-import org.opensearch.security.auth.Destroyable;
-import org.opensearch.security.support.WildcardMatcher;
-import org.opensearch.security.user.AuthCredentials;
-import org.opensearch.security.user.User;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.SpecialPermission;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.auth.AuthenticationBackend;
+import com.colasoft.opensearch.security.auth.Destroyable;
+import com.colasoft.opensearch.security.support.WildcardMatcher;
+import com.colasoft.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.security.user.User;
 
 public class LDAPAuthenticationBackend2 implements AuthenticationBackend, Destroyable {
 

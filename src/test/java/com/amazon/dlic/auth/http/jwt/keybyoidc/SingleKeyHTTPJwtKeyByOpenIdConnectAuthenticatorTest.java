@@ -17,9 +17,9 @@ import com.google.common.collect.ImmutableMap;
 import org.junit.Assert;
 import org.junit.Test;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.security.user.AuthCredentials;
-import org.opensearch.security.util.FakeRestRequest;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.security.util.FakeRestRequest;
 
 public class SingleKeyHTTPJwtKeyByOpenIdConnectAuthenticatorTest {
 

@@ -30,17 +30,17 @@ import com.amazon.dlic.auth.http.jwt.keybyoidc.BadCredentialsException;
 import com.amazon.dlic.auth.http.jwt.keybyoidc.JwtVerifier;
 import com.amazon.dlic.auth.http.jwt.keybyoidc.KeyProvider;
 
-import org.opensearch.OpenSearchSecurityException;
-import org.opensearch.SpecialPermission;
-import org.opensearch.common.Strings;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.common.util.concurrent.ThreadContext;
-import org.opensearch.rest.BytesRestResponse;
-import org.opensearch.rest.RestChannel;
-import org.opensearch.rest.RestRequest;
-import org.opensearch.rest.RestStatus;
-import org.opensearch.security.auth.HTTPAuthenticator;
-import org.opensearch.security.user.AuthCredentials;
+import com.colasoft.opensearch.OpenSearchSecurityException;
+import com.colasoft.opensearch.SpecialPermission;
+import com.colasoft.opensearch.common.Strings;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.util.concurrent.ThreadContext;
+import com.colasoft.opensearch.rest.BytesRestResponse;
+import com.colasoft.opensearch.rest.RestChannel;
+import com.colasoft.opensearch.rest.RestRequest;
+import com.colasoft.opensearch.rest.RestStatus;
+import com.colasoft.opensearch.security.auth.HTTPAuthenticator;
+import com.colasoft.opensearch.security.user.AuthCredentials;
 
 public abstract class AbstractHTTPJwtAuthenticator implements HTTPAuthenticator {
     private final static Logger log = LogManager.getLogger(AbstractHTTPJwtAuthenticator.class);

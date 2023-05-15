@@ -26,8 +26,8 @@ import org.apache.logging.log4j.Logger;
 import org.ldaptive.Connection;
 import org.ldaptive.LdapAttribute;
 
-import org.opensearch.SpecialPermission;
-import org.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.SpecialPermission;
+import com.colasoft.opensearch.common.settings.Settings;
 
 public final class Utils {
 

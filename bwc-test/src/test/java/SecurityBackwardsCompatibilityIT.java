@@ -5,7 +5,7 @@
  * this file be licensed under the Apache-2.0 license or a
  * compatible open source license.
  */
-package org.opensearch.security.bwc;
+package com.colasoft.opensearch.security.bwc;
 
 import java.util.List;
 import java.util.Map;
@@ -13,10 +13,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import org.junit.Assert;
-import org.opensearch.client.Response;
-import org.opensearch.common.settings.Settings;
-import org.opensearch.rest.RestStatus;
-import org.opensearch.test.rest.OpenSearchRestTestCase;
+import com.colasoft.opensearch.client.Response;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.rest.RestStatus;
+import com.colasoft.opensearch.test.rest.OpenSearchRestTestCase;
 
 import com.google.common.collect.ImmutableMap;
 

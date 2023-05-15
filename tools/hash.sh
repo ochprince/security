@@ -32,4 +32,4 @@ else
 fi
 
 
-"$BIN_PATH" $JAVA_OPTS -cp "$DIR/../../opendistro_security_ssl/*:$DIR/../*:$DIR/../deps/*:$DIR/../../../lib/*" org.opensearch.security.tools.Hasher "$@"
+"$BIN_PATH" $JAVA_OPTS -cp "$DIR/../../opendistro_security_ssl/*:$DIR/../*:$DIR/../deps/*:$DIR/../../../lib/*" com.colasoft.opensearch.security.tools.Hasher "$@"

@@ -37,8 +37,8 @@ import org.junit.Test;
 
 import com.amazon.dlic.util.SettingsBasedSSLConfigurator;
 
-import org.opensearch.security.test.helper.file.FileHelper;
-import org.opensearch.security.test.helper.network.SocketUtils;
+import com.colasoft.opensearch.security.test.helper.file.FileHelper;
+import com.colasoft.opensearch.security.test.helper.network.SocketUtils;
 
 public class KeySetRetrieverTest {
     protected static MockIpdServer mockIdpServer;

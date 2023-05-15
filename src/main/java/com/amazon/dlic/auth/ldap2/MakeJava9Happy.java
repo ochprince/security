@@ -18,7 +18,7 @@ import java.security.PrivilegedExceptionAction;
 import io.netty.util.internal.PlatformDependent;
 import org.ldaptive.ssl.ThreadLocalTLSSocketFactory;
 
-import org.opensearch.SpecialPermission;
+import com.colasoft.opensearch.SpecialPermission;
 
 public class MakeJava9Happy {
 

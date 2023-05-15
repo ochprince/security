@@ -30,7 +30,7 @@ import com.amazon.dlic.auth.ldap.util.ConfigConstants;
 import com.amazon.dlic.auth.ldap.util.LdapHelper;
 import com.amazon.dlic.auth.ldap.util.Utils;
 
-import org.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.common.settings.Settings;
 
 public class LDAPUserSearcher {
     protected static final Logger log = LogManager.getLogger(LDAPUserSearcher.class);

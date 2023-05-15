@@ -20,8 +20,8 @@ import java.security.PrivilegedExceptionAction;
 import net.shibboleth.utilities.java.support.resolver.ResolverException;
 import org.opensaml.saml.metadata.resolver.impl.FilesystemMetadataResolver;
 
-import org.opensearch.common.settings.Settings;
-import org.opensearch.env.Environment;
+import com.colasoft.opensearch.common.settings.Settings;
+import com.colasoft.opensearch.env.Environment;
 
 public class SamlFilesystemMetadataResolver extends FilesystemMetadataResolver {
 

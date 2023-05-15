@@ -33,7 +33,7 @@ import org.ldaptive.SearchResult;
 import org.ldaptive.SearchScope;
 import org.ldaptive.referral.SearchReferralHandler;
 
-import org.opensearch.SpecialPermission;
+import com.colasoft.opensearch.SpecialPermission;
 
 public class LdapHelper {
 
