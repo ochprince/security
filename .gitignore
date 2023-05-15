@@ -43,3 +43,4 @@ out/
 build/
 gradle-build/
 .gradle/
+gradle/wrapper/gradle-7.6-all.zip
